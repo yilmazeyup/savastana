@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="tr">
+<html lang="nl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="referrer" content="no-referrer">
-<title>Savastana · Özel</title>
+<title>Savastana · Privé</title>
 <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
@@ -17,7 +17,7 @@ body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--cream);
 .top { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .mark { font: 500 18px/1 'Fraunces', Georgia, serif; letter-spacing: .32em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
 .mark b { color: var(--gold); font-weight: 500; }
-.langs { display: flex; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; }
+.langs { direction: ltr; flex-wrap: wrap; display: flex; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; }
 .langs button { all: unset; cursor: pointer; font: 600 12px/1 'IBM Plex Mono', monospace; padding: 8px 11px; border-radius: 999px; color: var(--muted); }
 .langs button[aria-pressed="true"] { background: var(--cream); color: var(--bg); }
 .eye { margin-top: 72px; font: 600 12px/1 'IBM Plex Mono', monospace; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
@@ -43,7 +43,7 @@ p.lead { color: var(--muted); max-width: 56ch; margin: 18px 0 0; }
 </head>
 <body>
 <div class="wrap">
-  <div class="top"><a class="mark" href="../">Savast<b>a</b>na</a><div class="langs"><button type="button" data-l="tr">TR</button><button type="button" data-l="en">EN</button><button type="button" data-l="de">DE</button></div></div>
+  <div class="top"><a class="mark" href="../">Savast<b>a</b>na</a><div class="langs"><button type="button" data-l="nl">NL</button><button type="button" data-l="en">EN</button><button type="button" data-l="de">DE</button><button type="button" data-l="fr">FR</button><button type="button" data-l="tr">TR</button><button type="button" data-l="ar">AR</button></div></div>
   <div class="eye" data-t="eye"></div>
   <h1 data-t="h"></h1>
   <p class="lead" data-t="p"></p>
@@ -53,18 +53,24 @@ p.lead { color: var(--muted); max-width: 56ch; margin: 18px 0 0; }
 </div>
 <script>
 // Dosyalar AES-256-GCM ile şifrelidir; anahtar yalnızca bağlantının # sonrasındadır (sunucuya hiç gitmez). Çözme tarayıcıda yapılır.
-const T = {
-  eye: ['Özel · iş planları', 'Private · business plans', 'Privat · Businesspläne'],
-  h: ['İş planları', 'Business plans', 'Businesspläne'],
-  p: ['Bu sayfa yalnızca size gönderilen bağlantıyla açılır. Planlar tarayıcınızda çözülür; bağlantıyı başkalarıyla paylaşmayın.', 'This page opens only with the link you were sent. The plans are decrypted in your browser; please do not share the link.', 'Diese Seite öffnet sich nur mit dem Link, den Sie erhalten haben. Die Pläne werden in Ihrem Browser entschlüsselt; bitte geben Sie den Link nicht weiter.'],
-  note: ['Dosyalar şifreli saklanır; anahtar bağlantının içindedir ve sunucuya gönderilmez.', 'The files are stored encrypted; the key is part of the link and is never sent to the server.', 'Die Dateien liegen verschlüsselt vor; der Schlüssel steckt im Link und wird nie an den Server gesendet.'],
-  open: ['Aç', 'Open', 'Öffnen'], save: ['İndir', 'Download', 'Herunterladen'], wait: ['Açılıyor…', 'Opening…', 'Wird geöffnet…'],
-  bad: ['Bu bağlantı eksik ya da geçersiz. Lütfen size gönderilen bağlantının tamamını kullanın.', 'This link is incomplete or invalid. Please use the full link you were sent.', 'Dieser Link ist unvollständig oder ungültig. Bitte verwenden Sie den vollständigen Link.'],
-  zayo: ['Zayo Kebap · Hollanda', 'Zayo Kebap · Netherlands', 'Zayo Kebap · Niederlande'], ledoner: ['Le Döner · Hollanda', 'Le Döner · Netherlands', 'Le Döner · Niederlande'],
-  sub: ['İş planı · PDF', 'Business plan · PDF', 'Businessplan · PDF'], tr: ['Türkçe', 'Turkish', 'Türkisch'], en: ['İngilizce', 'English', 'Englisch'], de: ['Almanca', 'German', 'Deutsch'],
+const T = {   // [nl, en, de, fr, tr, ar]
+  eye: ['Privé · ondernemingsplannen', 'Private · business plans', 'Privat · Businesspläne', 'Privé · business plans', 'Özel · iş planları', 'خاص · خطط العمل'],
+  h: ['Ondernemingsplannen', 'Business plans', 'Businesspläne', 'Business plans', 'İş planları', 'خطط العمل'],
+  p: ['Deze pagina opent alleen met de link die u is gestuurd. De plannen worden in uw browser ontsleuteld; deel de link niet verder.', 'This page opens only with the link you were sent. The plans are decrypted in your browser; please do not share the link.',
+      'Diese Seite öffnet sich nur mit dem Link, den Sie erhalten haben. Die Pläne werden in Ihrem Browser entschlüsselt; bitte geben Sie den Link nicht weiter.', 'Cette page ne s’ouvre qu’avec le lien qui vous a été envoyé. Les plans sont déchiffrés dans votre navigateur ; merci de ne pas partager le lien.',
+      'Bu sayfa yalnızca size gönderilen bağlantıyla açılır. Planlar tarayıcınızda çözülür; bağlantıyı başkalarıyla paylaşmayın.', 'لا تُفتح هذه الصفحة إلا بالرابط الذي أُرسل إليك. تُفك الخطط في متصفحك؛ يُرجى عدم مشاركة الرابط.'],
+  note: ['De bestanden staan versleuteld; de sleutel zit in de link en wordt nooit naar de server gestuurd.', 'The files are stored encrypted; the key is part of the link and is never sent to the server.', 'Die Dateien liegen verschlüsselt vor; der Schlüssel steckt im Link und wird nie an den Server gesendet.',
+         'Les fichiers sont chiffrés ; la clé fait partie du lien et n’est jamais envoyée au serveur.', 'Dosyalar şifreli saklanır; anahtar bağlantının içindedir ve sunucuya gönderilmez.', 'الملفات مخزّنة مشفّرة؛ المفتاح جزء من الرابط ولا يُرسل إلى الخادم أبدًا.'],
+  open: ['Openen', 'Open', 'Öffnen', 'Ouvrir', 'Aç', 'فتح'], save: ['Downloaden', 'Download', 'Herunterladen', 'Télécharger', 'İndir', 'تنزيل'], wait: ['Openen…', 'Opening…', 'Wird geöffnet…', 'Ouverture…', 'Açılıyor…', 'جارٍ الفتح…'],
+  bad: ['Deze link is onvolledig of ongeldig. Gebruik de volledige link die u is gestuurd.', 'This link is incomplete or invalid. Please use the full link you were sent.', 'Dieser Link ist unvollständig oder ungültig. Bitte verwenden Sie den vollständigen Link.',
+        'Ce lien est incomplet ou invalide. Utilisez le lien complet qui vous a été envoyé.', 'Bu bağlantı eksik ya da geçersiz. Lütfen size gönderilen bağlantının tamamını kullanın.', 'هذا الرابط ناقص أو غير صالح. يُرجى استخدام الرابط الكامل الذي أُرسل إليك.'],
+  zayo: ['Zayo Kebap · Nederland', 'Zayo Kebap · Netherlands', 'Zayo Kebap · Niederlande', 'Zayo Kebap · Pays-Bas', 'Zayo Kebap · Hollanda', 'Zayo Kebap · هولندا'],
+  ledoner: ['Le Döner · Nederland', 'Le Döner · Netherlands', 'Le Döner · Niederlande', 'Le Döner · Pays-Bas', 'Le Döner · Hollanda', 'Le Döner · هولندا'],
+  sub: ['Ondernemingsplan · pdf', 'Business plan · PDF', 'Businessplan · PDF', 'Business plan · PDF', 'İş planı · PDF', 'خطة العمل · PDF'],
+  tr: ['Turks', 'Turkish', 'Türkisch', 'Turc', 'Türkçe', 'التركية'], en: ['Engels', 'English', 'Englisch', 'Anglais', 'İngilizce', 'الإنجليزية'], de: ['Duits', 'German', 'Deutsch', 'Allemand', 'Almanca', 'الألمانية'],
 };
-const LS = ['tr', 'en', 'de'];
-let L = (() => { try { const s = localStorage.getItem('sv-lang'); if (LS.includes(s)) return s; } catch (e) {} const n = (navigator.language || 'en').slice(0, 2); return LS.includes(n) ? n : 'en'; })();
+const LS = ['nl', 'en', 'de', 'fr', 'tr', 'ar'];
+let L = (() => { const q = new URLSearchParams(location.search).get('lang'); if (LS.includes(q)) return q; try { const s = localStorage.getItem('sv-lang'); if (LS.includes(s)) return s; } catch (e) {} return 'nl'; })();
 const tt = k => T[k][LS.indexOf(L)];
 const b64 = s => Uint8Array.from(atob(s.replace(/-/g, '+').replace(/_/g, '/') + '==='.slice((s.length + 3) % 4)), c => c.charCodeAt(0));
 const keyStr = new URLSearchParams(location.hash.slice(1)).get('k');
@@ -77,12 +83,12 @@ async function init() {
   draw();
 }
 function draw() {
-  document.documentElement.lang = L; document.title = 'Savastana · ' + tt('h');
+  document.documentElement.lang = L; document.documentElement.dir = L === 'ar' ? 'rtl' : 'ltr'; document.title = 'Savastana · ' + tt('h');
   for (const e of document.querySelectorAll('[data-t]')) e.textContent = tt(e.dataset.t);
   for (const b of document.querySelectorAll('.langs button')) b.setAttribute('aria-pressed', b.dataset.l === L);
   const out = document.getElementById('out');
   if (!man) { out.innerHTML = `<div class="msg">${tt('bad')}</div>`; return; }
-  const mb = n => (n / 1048576).toLocaleString(L, { maximumFractionDigits: 1 }) + ' MB';
+  const mb = n => (n / 1048576).toLocaleString(L === 'ar' ? 'ar-u-nu-latn' : L, { maximumFractionDigits: 1 }) + ' MB';
   out.innerHTML = '<div class="grid">' + ['zayo', 'ledoner'].map(br => `<div class="card"><h2>${tt(br)}</h2><div class="sub">${tt('sub')}</div><div class="rows">` +
     man.filter(f => f.brand === br).map(f => `<div class="row"><b>${f.lang.toUpperCase()}</b><span>${tt(f.lang)} · ${mb(f.size)}</span><button type="button" data-id="${f.id}">${tt('open')}</button></div>`).join('') + '</div></div>').join('') + '</div>';
 }
