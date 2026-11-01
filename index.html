@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Savastana · Hollanda</title>
+<meta name="description" content="Savastana · Hollanda projeleri: canlı operasyon ikizi, süreç videosu ve markalar.">
+<meta property="og:title" content="Savastana · Netherlands">
+<meta property="og:description" content="Brands, plans and a living operation for the Netherlands.">
+<meta property="og:image" content="https://savastana.com/img/og.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0F0D0A">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root { --bg: #F5F1EA; --paper: #FBF8F3; --ink: #15120E; --ink2: #4A443B; --muted: #8A8174; --line: #E3DACB; --gold: #B8892B; --gold2: #D4AF37; --dark: #0F0D0A; --dark2: #1A1712; --cream: #F5F1E9;
+  --serif: 'Fraunces', Georgia, serif; --sans: 'Inter', system-ui, sans-serif; --mono: 'IBM Plex Mono', ui-monospace, monospace; --r: 18px; --max: 1240px; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+img, video { display: block; max-width: 100%; }
+a { color: inherit; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+.eyebrow { font: 600 12px/1 var(--mono); letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -.015em; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(44px, 6.4vw, 92px); line-height: .98; font-variation-settings: 'opsz' 144; }
+h2 { font-size: clamp(34px, 4.4vw, 60px); line-height: 1.02; font-variation-settings: 'opsz' 120; }
+h3 { font-size: 30px; line-height: 1.1; }
+h1 em, h2 em { font-style: italic; color: var(--gold); }
+.lead { font-size: clamp(17px, 1.5vw, 20px); color: var(--ink2); max-width: 46ch; margin: 26px 0 0; text-wrap: pretty; }
+
+/* üst çubuk */
+header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid transparent; transition: border-color .3s; }
+header.sc { border-bottom-color: var(--line); }
+.bar { display: flex; align-items: center; gap: 28px; height: 72px; }
+.mark { font: 500 21px/1 var(--serif); letter-spacing: .32em; text-decoration: none; text-transform: uppercase; }
+.mark b { color: var(--gold); font-weight: 500; }
+nav.links { display: flex; gap: 26px; margin-left: auto; }
+nav.links a { text-decoration: none; font-size: 15px; color: var(--ink2); transition: color .2s; }
+nav.links a:hover { color: var(--ink); }
+.langs { display: flex; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; }
+.langs button { all: unset; cursor: pointer; font: 600 12px/1 var(--mono); letter-spacing: .08em; padding: 8px 11px; border-radius: 999px; color: var(--muted); }
+.langs button[aria-pressed="true"] { background: var(--ink); color: var(--cream); }
+.langs button:focus-visible, .btn:focus-visible, .chip:focus-visible, .tab:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+/* düğmeler */
+.btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 22px; border-radius: 999px; font: 600 15px/1 var(--sans); text-decoration: none; border: 1px solid var(--ink); transition: transform .2s, background .2s, color .2s; }
+.btn:hover { transform: translateY(-1px); }
+.btn.pri { background: var(--ink); color: var(--cream); }
+.btn.ghost { background: transparent; }
+.btn svg { width: 16px; height: 16px; }
+.dk .btn { border-color: rgba(245, 241, 233, .4); color: var(--cream); }
+.dk .btn.pri { background: var(--gold2); border-color: var(--gold2); color: var(--dark); }
+
+/* giriş */
+.hero { padding: 76px 0 40px; }
+.hero .grid { display: grid; grid-template-columns: 1.02fr 1fr; gap: 56px; align-items: center; }
+.collage { position: relative; aspect-ratio: 4 / 3.3; }
+.collage .a, .collage .b { position: absolute; border-radius: var(--r); overflow: hidden; box-shadow: 0 40px 80px -30px rgba(40, 28, 8, .45), 0 0 0 1px rgba(40, 28, 8, .08); }
+.collage .a { inset: 0 0 18% 9%; }
+.collage .b { width: 52%; left: 0; bottom: 0; aspect-ratio: 16 / 10; }
+.collage img { width: 100%; height: 100%; object-fit: cover; }
+.collage .a img { object-position: 60% 50%; }
+.collage .b img { object-position: 50% 45%; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-top: 72px; }
+.stat { padding: 28px 24px 26px 0; }
+.stat + .stat { padding-left: 24px; border-left: 1px solid var(--line); }
+.stat b { display: block; font: 300 48px/1 var(--serif); font-variation-settings: 'opsz' 144; }
+.stat span { display: block; margin-top: 10px; font-size: 14px; color: var(--ink2); }
+
+/* bölümler */
+section.s { padding: 120px 0; }
+.dk { background: var(--dark); color: var(--cream); }
+.dk .lead { color: rgba(245, 241, 233, .72); }
+.head { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: end; margin-bottom: 56px; }
+.head .eyebrow { margin-bottom: 22px; }
+.feats { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border-top: 1px solid rgba(245, 241, 233, .14); }
+.feats li { padding: 26px 30px 26px 0; border-bottom: 1px solid rgba(245, 241, 233, .14); display: grid; grid-template-columns: 44px 1fr; gap: 6px; font-size: 16px; color: rgba(245, 241, 233, .82); }
+.feats li:nth-child(2n) { padding-left: 30px; border-left: 1px solid rgba(245, 241, 233, .14); }
+.feats li i { font: 600 12px/1.8 var(--mono); color: var(--gold2); font-style: normal; }
+.gal { margin-top: 64px; }
+.gal .view { position: relative; aspect-ratio: 16 / 9; border-radius: 22px; overflow: hidden; background: var(--dark2); box-shadow: 0 50px 100px -40px rgba(0, 0, 0, .8), 0 0 0 1px rgba(255, 255, 255, .06); }
+.gal .view img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .6s; }
+.gal .view img.on { opacity: 1; }
+.tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.tab { all: unset; cursor: pointer; padding: 11px 16px; border-radius: 999px; border: 1px solid rgba(245, 241, 233, .2); font-size: 14px; color: rgba(245, 241, 233, .7); transition: all .2s; }
+.tab[aria-selected="true"] { background: var(--cream); color: var(--dark); border-color: var(--cream); }
+.cap { margin-top: 16px; font: 500 13px/1.5 var(--mono); color: rgba(245, 241, 233, .55); min-height: 1.5em; }
+.decks { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 18px; font-size: 14px; color: rgba(245, 241, 233, .6); }
+.decks a { text-decoration: none; padding: 7px 12px; border-radius: 8px; border: 1px solid rgba(245, 241, 233, .18); font: 600 12px/1 var(--mono); letter-spacing: .08em; color: var(--cream); }
+.decks a:hover { border-color: var(--gold2); color: var(--gold2); }
+
+/* video */
+.player { border-radius: 22px; overflow: hidden; background: #000; box-shadow: 0 40px 90px -40px rgba(40, 28, 8, .5); aspect-ratio: 16 / 9; }
+.player video { width: 100%; height: 100%; }
+.vctl { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 18px; }
+.chip { all: unset; cursor: pointer; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--line); font-size: 14px; color: var(--ink2); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+.vctl .dur { margin-left: auto; font: 500 13px var(--mono); color: var(--muted); }
+
+/* markalar */
+.brands { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.brand { position: relative; background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 40px; overflow: hidden; display: flex; flex-direction: column; min-height: 360px; }
+.brand .mono { width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center; font: 500 30px/1 var(--serif); color: var(--cream); }
+.brand.z .mono { background: var(--dark); color: var(--gold2); }
+.brand.l .mono { background: #7A2E1F; }
+.brand h3 { margin-top: 28px; }
+.brand p { color: var(--ink2); margin: 14px 0 0; max-width: 44ch; }
+.brand .meta { margin-top: auto; padding-top: 30px; display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; font: 500 13px/1.4 var(--mono); color: var(--muted); }
+.brand .meta .lk { display: inline-flex; align-items: center; gap: 6px; color: var(--ink2); }
+.brand .meta svg { width: 14px; height: 14px; }
+.brand .ln { display: flex; gap: 6px; }
+.brand .ln span { padding: 4px 8px; border: 1px solid var(--line); border-radius: 6px; font-size: 11px; color: var(--ink2); }
+
+footer { padding: 90px 0 60px; }
+footer .top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; align-items: flex-end; }
+footer .big { font: 300 clamp(48px, 8vw, 120px)/.9 var(--serif); letter-spacing: .06em; text-transform: uppercase; }
+footer .big b { color: var(--gold2); font-weight: 300; }
+footer nav { display: flex; flex-wrap: wrap; gap: 22px; }
+footer nav a { text-decoration: none; color: rgba(245, 241, 233, .7); font-size: 15px; }
+footer nav a:hover { color: var(--cream); }
+.credit { margin-top: 60px; padding-top: 28px; border-top: 1px solid rgba(245, 241, 233, .14); font: italic 400 16px/1.6 var(--serif); color: rgba(245, 241, 233, .6); }
+.credit b { font-style: normal; font-weight: 500; color: var(--gold2); }
+
+/* görünme animasyonu */
+.rv { opacity: 0; transform: translateY(18px); transition: opacity .8s ease, transform .8s ease; }
+.rv.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } .gal .view img { transition: none; } }
+
+@media (max-width: 960px) {
+  nav.links { display: none; }
+  .langs { margin-left: auto; }
+  .hero { padding-top: 48px; }
+  .hero .grid, .head, .brands { grid-template-columns: 1fr; }
+  .head { gap: 20px; }
+  .stats { grid-template-columns: 1fr 1fr; margin-top: 48px; }
+  .stat:nth-child(3) { padding-left: 0; border-left: 0; }
+  .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .feats { grid-template-columns: 1fr; }
+  .feats li:nth-child(2n) { padding-left: 0; border-left: 0; }
+  section.s { padding: 84px 0; }
+  .brand { padding: 30px; min-height: 0; }
+}
+@media (max-width: 520px) {
+  .wrap { padding: 0 18px; }
+  .bar { height: 62px; }
+  .mark { font-size: 17px; letter-spacing: .26em; }
+  .btn { padding: 14px 18px; font-size: 14px; }
+  .stat b { font-size: 38px; }
+  .stat { padding-right: 12px; }
+  .stat + .stat { padding-left: 14px; }
+  .stat:nth-child(3) { padding-left: 0; }
+  .vctl .dur { margin-left: 0; width: 100%; }
+}
+</style>
+</head>
+<body>
+<header id="hdr"><div class="wrap bar">
+  <a class="mark" href="#top">Savast<b>a</b>na</a>
+  <nav class="links"><a href="#twin" data-t="nav.twin"></a><a href="#video" data-t="nav.video"></a><a href="#brands" data-t="nav.brands"></a></nav>
+  <div class="langs" role="group" aria-label="Language"><button type="button" data-l="tr">TR</button><button type="button" data-l="en">EN</button><button type="button" data-l="de">DE</button></div>
+</div></header>
+
+<main id="top">
+  <section class="hero"><div class="wrap">
+    <div class="grid">
+      <div class="rv">
+        <div class="eyebrow" data-t="hero.eye"></div>
+        <h1 style="margin-top:26px" data-t="hero.h" data-html></h1>
+        <p class="lead" data-t="hero.p"></p>
+        <div class="btns"><a class="btn pri" data-href="demo" target="_blank" rel="noopener"><span data-t="cta.demo"></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11 11 5M6 5h5v5"/></svg></a><a class="btn ghost" href="#video" data-t="cta.video"></a></div>
+      </div>
+      <div class="collage rv"><div class="a"><img data-img="night" alt="" data-alt="alt.night"></div><div class="b"><img data-img="kiosk2" alt="" data-alt="alt.kiosk"></div></div>
+    </div>
+    <div class="stats rv">
+      <div class="stat"><b data-n="12"></b><span data-t="st.1"></span></div>
+      <div class="stat"><b data-n="3034"></b><span data-t="st.2"></span></div>
+      <div class="stat"><b data-n="183"></b><span data-t="st.3"></span></div>
+      <div class="stat"><b data-n="3"></b><span data-t="st.4"></span></div>
+    </div>
+  </div></section>
+
+  <section class="s dk" id="twin"><div class="wrap">
+    <div class="head">
+      <div class="rv"><div class="eyebrow" data-t="tw.eye"></div><h2 data-t="tw.h" data-html></h2></div>
+      <div class="rv"><p class="lead" style="margin:0" data-t="tw.p"></p>
+        <div class="btns"><a class="btn pri" data-href="demo" target="_blank" rel="noopener" data-t="cta.demo"></a><a class="btn" data-href="tour" target="_blank" rel="noopener" data-t="cta.tour"></a><a class="btn" data-href="help" target="_blank" rel="noopener" data-t="cta.help"></a></div>
+        <div class="decks"><span data-t="tw.deck"></span><a data-href="deck-tr" target="_blank" rel="noopener">TR</a><a data-href="deck-en" target="_blank" rel="noopener">EN</a><a data-href="deck-de" target="_blank" rel="noopener">DE</a></div>
+      </div>
+    </div>
+    <ul class="feats rv"><li><i>01</i><span data-t="f.1"></span></li><li><i>02</i><span data-t="f.2"></span></li><li><i>03</i><span data-t="f.3"></span></li><li><i>04</i><span data-t="f.4"></span></li></ul>
+    <div class="gal rv">
+      <div class="view" id="gview"><img data-img="store" alt=""><img data-img="kiosk2" alt=""><img data-img="cargo" alt=""><img data-img="tower" alt=""><img data-img="hero" alt=""></div>
+      <div class="tabs" role="tablist"><button class="tab" role="tab" data-g="0" data-t="g.0"></button><button class="tab" role="tab" data-g="1" data-t="g.1"></button><button class="tab" role="tab" data-g="2" data-t="g.2"></button><button class="tab" role="tab" data-g="3" data-t="g.3"></button><button class="tab" role="tab" data-g="4" data-t="g.4"></button></div>
+      <div class="cap" id="gcap" aria-live="polite"></div>
+    </div>
+  </div></section>
+
+  <section class="s" id="video"><div class="wrap">
+    <div class="head">
+      <div class="rv"><div class="eyebrow" data-t="v.eye"></div><h2 data-t="v.h" data-html></h2></div>
+      <p class="lead rv" style="margin:0" data-t="v.p"></p>
+    </div>
+    <div class="rv">
+      <div class="player"><video id="vid" controls playsinline preload="metadata"></video></div>
+      <div class="vctl"><button class="chip" type="button" data-m="voice" data-t="v.voice"></button><button class="chip" type="button" data-m="music" data-t="v.music"></button><span class="dur" data-t="v.dur"></span></div>
+    </div>
+  </div></section>
+
+  <section class="s" id="brands" style="padding-top:20px"><div class="wrap">
+    <div class="head">
+      <div class="rv"><div class="eyebrow" data-t="b.eye"></div><h2 data-t="b.h" data-html></h2></div>
+      <p class="lead rv" style="margin:0" data-t="b.p"></p>
+    </div>
+    <div class="brands">
+      <article class="brand z rv"><div class="mono">Z</div><h3>Zayo Kebap</h3><p data-t="b.z"></p>
+        <div class="meta"><span data-t="b.plan"></span><span class="ln"><span>TR</span><span>EN</span><span>DE</span></span><span class="lk"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg><span data-t="b.priv"></span></span></div></article>
+      <article class="brand l rv"><div class="mono">L</div><h3>Le Döner</h3><p data-t="b.l"></p>
+        <div class="meta"><span data-t="b.plan"></span><span class="ln"><span>TR</span><span>EN</span><span>DE</span></span><span class="lk"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg><span data-t="b.priv"></span></span></div></article>
+    </div>
+  </div></section>
+</main>
+
+<footer class="dk"><div class="wrap">
+  <div class="top"><div class="big">Savast<b>a</b>na</div>
+    <nav><a data-href="demo" target="_blank" rel="noopener" data-t="cta.demo"></a><a data-href="help" target="_blank" rel="noopener" data-t="cta.help"></a><a href="#video" data-t="nav.video"></a></nav></div>
+  <p class="credit">Carefully and with love presented by <b>Faruk Kilic &amp; Eyup Yilmaz</b> (2026)</p>
+</div></footer>
+
+<script>
+// Bağlantılar tek yerde: alan adı bağlanınca yalnızca DEMO değişir
+const DEMO = 'https://yilmazeyup.github.io/zayo-nl-demo/';
+const DECK = { tr: 'Zayo-NL-Operasyon-Ikizi-Sunum.pdf', en: 'Zayo-NL-Operations-Twin-Presentation-EN.pdf', de: 'Zayo-NL-Betriebs-Zwilling-Praesentation-DE.pdf' };
+const T = {
+  'nav.twin': ['Operasyon ikizi', 'Operations twin', 'Betriebs-Zwilling'], 'nav.video': ['Süreç videosu', 'Process video', 'Prozessvideo'], 'nav.brands': ['Markalar', 'Brands', 'Marken'],
+  'hero.eye': ['Savastana · Hollanda', 'Savastana · Netherlands', 'Savastana · Niederlande'],
+  'hero.h': ['Hollanda için markalar, planlar ve <em>canlı</em> bir operasyon.', 'Brands, plans and a <em>living</em> operation for the Netherlands.', 'Marken, Pläne und ein <em>lebendiger</em> Betrieb für die Niederlande.'],
+  'hero.p': ['Döner zincirlerini Hollanda\'ya getiriyoruz. İş planından tedarik zincirine, kiosktan masaya kadar her adım üç dilde hazır ve tıklanabilir.',
+             'We are bringing döner chains to the Netherlands. From the business plan to the supply chain, from the kiosk to the table, every step is ready in three languages and you can click on it.',
+             'Wir bringen Döner-Ketten in die Niederlande. Vom Businessplan über die Lieferkette bis vom Kiosk zum Tisch: jeder Schritt in drei Sprachen, alles zum Anklicken.'],
+  'cta.demo': ['Canlı demoyu aç', 'Open the live demo', 'Live-Demo öffnen'], 'cta.video': ['Videoyu izle', 'Watch the video', 'Video ansehen'],
+  'cta.tour': ['Rehberli tur', 'Guided tour', 'Geführter Rundgang'], 'cta.help': ['Tanıtım videosu ve destek', 'Explainer video and help', 'Erklärvideo und Hilfe'],
+  'alt.night': ['Operasyon ikizi: gece Eindhoven haritası, mağazalar ve araçlar', 'Operations twin: Eindhoven at night with shops and vehicles', 'Betriebs-Zwilling: Eindhoven bei Nacht mit Läden und Fahrzeugen'],
+  'alt.kiosk': ['Self-servis kiosk ve basılan fiş', 'Self-order kiosk and the printed receipt', 'Bestellkiosk und gedruckter Bon'],
+  'st.1': ['mağaza, bir Cuma günü boyunca', 'shops, through one Friday', 'Läden, einen Freitag lang'], 'st.2': ['günlük sipariş, iş planı rakamlarıyla', 'orders a day, from the business plan', 'Bestellungen am Tag, aus dem Businessplan'],
+  'st.3': ['soru-cevap, her biri “Göster” düğmeli', 'questions and answers, each with “Show me”', 'Fragen und Antworten, jede mit „Anzeigen“'], 'st.4': ['dil: Türkçe, İngilizce, Almanca', 'languages: Turkish, English, German', 'Sprachen: Türkisch, Englisch, Deutsch'],
+  'tw.eye': ['01 · Operasyon ikizi', '01 · Operations twin', '01 · Betriebs-Zwilling'],
+  'tw.h': ['Zayo NL: tırdan masaya, <em>tek ekranda</em>.', 'Zayo NL: from the truck to the table, <em>on one screen</em>.', 'Zayo NL: vom Lkw bis zum Tisch, <em>auf einem Bildschirm</em>.'],
+  'tw.p': ['Bir Cuma gününü baştan sona canlı oynatan 3D dijital ikiz. Her şeye tıklanabilir, zaman ileri geri sarılabilir; bir ortağın ya da denetçinin sorabileceği her ayrıntının cevabı içinde.',
+           'A 3D digital twin that plays one Friday from start to finish. Click on anything, move time forward or back; the answer to every detail a partner or an inspector might ask is inside.',
+           'Ein digitaler 3D-Zwilling, der einen Freitag von Anfang bis Ende abspielt. Alles ist anklickbar, die Zeit lässt sich vor- und zurückspulen; die Antwort auf jedes Detail, das Partner oder Prüfer fragen könnten, steckt darin.'],
+  'tw.deck': ['Sunum (PDF):', 'Presentation (PDF):', 'Präsentation (PDF):'],
+  'f.1': ['Almanya\'daki üreticiden Eindhoven\'daki masaya: tır, depo, iki elektrikli kamyonet ve 12 mağaza.', 'From the producer in Germany to the table in Eindhoven: truck, warehouse, two electric vans and 12 shops.', 'Vom Hersteller in Deutschland bis zum Tisch in Eindhoven: Lkw, Lager, zwei E-Transporter und 12 Läden.'],
+  'f.2': ['Gerçek fotoğraflı self-servis kiosk: kart terminali, QR okuyucu ve fiş yazıcısıyla kendin sipariş ver.', 'A self-order kiosk with real photos: order yourself with the card terminal, QR scanner and receipt printer.', 'Ein Bestellkiosk mit echten Fotos: selbst bestellen mit Kartenterminal, QR-Scanner und Bondrucker.'],
+  'f.3': ['Her ayrıntı: sürücü kartı, palet okutmaları, gıda güvenliği kaydı ve şişten üreticiye parti izleme.', 'Every detail: driver card, pallet scans, the food-safety log and lot tracing from the cone back to the producer.', 'Jedes Detail: Fahrerkarte, Paletten-Scans, das Lebensmittelsicherheits-Protokoll und die Rückverfolgung vom Spieß bis zum Hersteller.'],
+  'f.4': ['Otomasyon merkezi ve kontrol kulesi: kurala uyan her iş otomatik, istisnalar tek onay kutusunda.', 'Automation centre and control tower: everything that follows the rule runs by itself, exceptions land in one inbox.', 'Automatisierungszentrale und Kontrollturm: alles nach Regel läuft von selbst, Ausnahmen landen in einem Eingang.'],
+  'g.0': ['Mağaza', 'Shop', 'Laden'], 'g.1': ['Kiosk', 'Kiosk', 'Kiosk'], 'g.2': ['Tırın içi', 'Inside the truck', 'Im Lkw'], 'g.3': ['Kontrol kulesi', 'Control tower', 'Kontrollturm'], 'g.4': ['Şehir', 'City', 'Stadt'],
+  'c.0': ['Masalar, siparişler, döner şişleri ve pipetler canlı.', 'Tables, orders, döner cones and straws, live.', 'Tische, Bestellungen, Dönerspieße und Strohhalme, live.'],
+  'c.1': ['Sipariş numarası, basılan fiş, %9 KDV ve ödeme şekli.', 'Order number, the printed receipt, 9% VAT and the payment method.', 'Bestellnummer, gedruckter Bon, 9 % MwSt. und Zahlungsart.'],
+  'c.2': ['5 palet, −20 °C, mühürlü kapı ve her paletin okutması.', '5 pallets, −20 °C, a sealed door and a scan for every pallet.', '5 Paletten, −20 °C, verplombte Tür und ein Scan für jede Palette.'],
+  'c.3': ['Siparişler, ciro, araçlar ve soğuk zincir tek bakışta.', 'Orders, sales, vehicles and the cold chain at a glance.', 'Bestellungen, Umsatz, Fahrzeuge und Kühlkette auf einen Blick.'],
+  'c.4': ['Eindhoven\'da 12 mağaza, depo ve iki elektrikli kamyonetin rotası.', 'Twelve shops in Eindhoven, the warehouse and the routes of two electric vans.', 'Zwölf Läden in Eindhoven, das Lager und die Touren der zwei E-Transporter.'],
+  'v.eye': ['02 · Süreç videosu', '02 · Process video', '02 · Prozessvideo'],
+  'v.h': ['Almanya\'dan <em>Eindhoven\'a</em>.', 'From Germany to <em>Eindhoven</em>.', 'Von Deutschland nach <em>Eindhoven</em>.'],
+  'v.p': ['Bir döner franchise ağı nasıl çalışır: etten pipete. Üç dakikalık, markasız bir süreç videosu; anlatımlı ya da yalnızca müzikli.', 'How a döner franchise network works, from the meat to the straw. A three-minute process video without brand names, narrated or with music only.', 'Wie ein Döner-Franchise-Netz funktioniert, vom Fleisch bis zum Strohhalm. Ein dreiminütiges Prozessvideo ohne Markennamen, mit Sprecher oder nur mit Musik.'],
+  'v.voice': ['Anlatımlı', 'Narrated', 'Mit Sprecher'], 'v.music': ['Yalnızca müzik', 'Music only', 'Nur Musik'], 'v.dur': ['2 dk 57 sn · 1080p', '2 min 57 s · 1080p', '2 Min. 57 s · 1080p'],
+  'b.eye': ['03 · Markalar', '03 · Brands', '03 · Marken'],
+  'b.h': ['Hollanda için <em>iki marka</em>.', '<em>Two brands</em> for the Netherlands.', '<em>Zwei Marken</em> für die Niederlande.'],
+  'b.p': ['Her marka için Türkçe, İngilizce ve Almanca iş planı tek kaynaktan hazırlandı. Planlar yalnızca özel bağlantıyla paylaşılır.', 'For each brand a business plan was written in Turkish, English and German from one source. The plans are shared only by private link.', 'Für jede Marke wurde ein Businessplan auf Türkisch, Englisch und Deutsch aus einer Quelle erstellt. Die Pläne teilen wir nur per privatem Link.'],
+  'b.z': ['Drive-thru, şehir, ekspres ve etkinlik formatlarında bir zincir. Plan konumları, yatırımı, tedarik zincirini ve büyümeyi kapsıyor; operasyon ikizi bu planın rakamlarıyla çalışıyor.', 'A chain in drive-thru, city, express and event formats. The plan covers locations, investment, the supply chain and growth; the operations twin runs on its figures.', 'Eine Kette in den Formaten Drive-thru, City, Express und Event. Der Plan umfasst Standorte, Investition, Lieferkette und Wachstum; der Betriebs-Zwilling läuft mit seinen Zahlen.'],
+  'b.l': ['Hollanda pazarı için hazırlanmış franchise iş planı: pazar, konumlar, yatırım ve işletme modeli, tek kaynaktan üç dilde.', 'A franchise business plan for the Dutch market: market, locations, investment and operating model, in three languages from one source.', 'Ein Franchise-Businessplan für den niederländischen Markt: Markt, Standorte, Investition und Betriebsmodell, in drei Sprachen aus einer Quelle.'],
+  'b.plan': ['İş planı', 'Business plan', 'Businessplan'], 'b.priv': ['Özel bağlantıyla', 'By private link', 'Per privatem Link'],
+  title: ['Savastana · Hollanda', 'Savastana · Netherlands', 'Savastana · Niederlande'],
+};
+const LS = ['tr', 'en', 'de'], LOC = { tr: 'tr-TR', en: 'en-GB', de: 'de-DE' };
+const pick = () => { const q = new URLSearchParams(location.search).get('lang'); if (LS.includes(q)) return q; try { const s = localStorage.getItem('sv-lang'); if (LS.includes(s)) return s; } catch (e) {} const n = (navigator.language || 'en').slice(0, 2); return LS.includes(n) ? n : 'en'; };
+let L = pick(), gi = 0, mode = 'voice';
+const href = k => k === 'demo' ? DEMO + '?lang=' + L : k === 'tour' ? DEMO + '?tour=1&lang=' + L : k === 'help' ? DEMO + 'help/?lang=' + L : k.startsWith('deck-') ? DEMO + 'media/deck/' + DECK[k.slice(5)] : '#';
+function apply() {
+  const i = LS.indexOf(L); document.documentElement.lang = L; document.title = T.title[i];
+  for (const e of document.querySelectorAll('[data-t]')) { const v = T[e.dataset.t][i]; if (e.hasAttribute('data-html')) e.innerHTML = v; else e.textContent = v; }
+  for (const e of document.querySelectorAll('[data-alt]')) e.alt = T[e.dataset.alt][i];
+  for (const e of document.querySelectorAll('[data-img]')) e.src = `img/${e.dataset.img}-${L}.webp`;
+  for (const e of document.querySelectorAll('[data-href]')) e.href = href(e.dataset.href);
+  for (const e of document.querySelectorAll('[data-n]')) e.textContent = (+e.dataset.n).toLocaleString(LOC[L]);
+  for (const b of document.querySelectorAll('.langs button')) b.setAttribute('aria-pressed', b.dataset.l === L);
+  gal(gi); vid(false);
+}
+function gal(n) { gi = n; const im = document.querySelectorAll('#gview img'); im.forEach((x, j) => { x.classList.toggle('on', j === n); x.alt = T['c.' + j][LS.indexOf(L)]; });
+  document.querySelectorAll('.tab').forEach((b, j) => b.setAttribute('aria-selected', j === n)); document.getElementById('gcap').textContent = T['c.' + n][LS.indexOf(L)]; }
+function vid(keep) { const v = document.getElementById('vid'), t = keep ? v.currentTime : 0, play = keep && !v.paused;
+  const src = `media/process-${L}${mode === 'music' ? '-music' : ''}.mp4`; if (!v.src.endsWith(src)) { v.src = src; v.poster = `img/poster-${L}.webp`; v.load(); if (t) v.currentTime = t; if (play) v.play().catch(() => {}); }
+  document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c.dataset.m === mode)); }
+document.querySelectorAll('.langs button').forEach(b => b.addEventListener('click', () => { L = b.dataset.l; try { localStorage.setItem('sv-lang', L); } catch (e) {} apply(); }));
+document.querySelectorAll('.tab').forEach(b => b.addEventListener('click', () => { gal(+b.dataset.g); auto = false; }));
+document.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => { mode = c.dataset.m; vid(true); }));
+let auto = !matchMedia('(prefers-reduced-motion: reduce)').matches; setInterval(() => { if (auto && !document.hidden) gal((gi + 1) % 5); }, 5200);
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('.rv').forEach(e => io.observe(e));
+addEventListener('scroll', () => document.getElementById('hdr').classList.toggle('sc', scrollY > 8), { passive: true });
+apply();
+</script>
+</body>
+</html>

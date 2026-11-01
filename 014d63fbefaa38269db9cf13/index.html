@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<title>Savastana · Özel</title>
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root { --bg: #0F0D0A; --card: #1A1712; --line: rgba(245, 241, 233, .12); --cream: #F5F1E9; --muted: rgba(245, 241, 233, .55); --gold: #D4AF37; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--cream); font: 400 16px/1.6 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 920px; margin: 0 auto; padding: 64px 24px 80px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.mark { font: 500 18px/1 'Fraunces', Georgia, serif; letter-spacing: .32em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+.mark b { color: var(--gold); font-weight: 500; }
+.langs { display: flex; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; }
+.langs button { all: unset; cursor: pointer; font: 600 12px/1 'IBM Plex Mono', monospace; padding: 8px 11px; border-radius: 999px; color: var(--muted); }
+.langs button[aria-pressed="true"] { background: var(--cream); color: var(--bg); }
+.eye { margin-top: 72px; font: 600 12px/1 'IBM Plex Mono', monospace; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
+h1 { margin: 20px 0 0; font: 300 clamp(38px, 6vw, 64px)/1.02 'Fraunces', Georgia, serif; letter-spacing: -.01em; }
+p.lead { color: var(--muted); max-width: 56ch; margin: 18px 0 0; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 30px; }
+.card h2 { margin: 0; font: 400 28px/1.1 'Fraunces', Georgia, serif; }
+.card .sub { margin-top: 6px; color: var(--muted); font-size: 14px; }
+.rows { margin-top: 22px; display: grid; gap: 10px; }
+.row { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 14px; }
+.row b { font: 600 12px/1 'IBM Plex Mono', monospace; letter-spacing: .1em; padding: 6px 8px; border-radius: 6px; background: rgba(212, 175, 55, .14); color: var(--gold); }
+.row span { flex: 1; font-size: 14px; color: var(--muted); }
+.row button { all: unset; cursor: pointer; font: 600 14px/1 'Inter', sans-serif; padding: 10px 14px; border-radius: 999px; background: var(--cream); color: var(--bg); }
+.row button[disabled] { opacity: .5; cursor: progress; }
+.row a { font-size: 13px; color: var(--muted); }
+.msg { margin-top: 48px; padding: 28px; border: 1px solid var(--line); border-radius: 22px; color: var(--muted); }
+.note { margin-top: 40px; font: 500 13px/1.6 'IBM Plex Mono', monospace; color: var(--muted); }
+.credit { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); font: italic 400 15px/1.6 'Fraunces', Georgia, serif; color: var(--muted); }
+.credit b { font-style: normal; font-weight: 500; color: var(--gold); }
+@media (max-width: 760px) { .grid { grid-template-columns: 1fr; } .wrap { padding-top: 40px; } .eye { margin-top: 48px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a class="mark" href="../">Savast<b>a</b>na</a><div class="langs"><button type="button" data-l="tr">TR</button><button type="button" data-l="en">EN</button><button type="button" data-l="de">DE</button></div></div>
+  <div class="eye" data-t="eye"></div>
+  <h1 data-t="h"></h1>
+  <p class="lead" data-t="p"></p>
+  <div id="out"></div>
+  <p class="note" data-t="note"></p>
+  <p class="credit">Carefully and with love presented by <b>Faruk Kilic &amp; Eyup Yilmaz</b> (2026)</p>
+</div>
+<script>
+// Dosyalar AES-256-GCM ile şifrelidir; anahtar yalnızca bağlantının # sonrasındadır (sunucuya hiç gitmez). Çözme tarayıcıda yapılır.
+const T = {
+  eye: ['Özel · iş planları', 'Private · business plans', 'Privat · Businesspläne'],
+  h: ['İş planları', 'Business plans', 'Businesspläne'],
+  p: ['Bu sayfa yalnızca size gönderilen bağlantıyla açılır. Planlar tarayıcınızda çözülür; bağlantıyı başkalarıyla paylaşmayın.', 'This page opens only with the link you were sent. The plans are decrypted in your browser; please do not share the link.', 'Diese Seite öffnet sich nur mit dem Link, den Sie erhalten haben. Die Pläne werden in Ihrem Browser entschlüsselt; bitte geben Sie den Link nicht weiter.'],
+  note: ['Dosyalar şifreli saklanır; anahtar bağlantının içindedir ve sunucuya gönderilmez.', 'The files are stored encrypted; the key is part of the link and is never sent to the server.', 'Die Dateien liegen verschlüsselt vor; der Schlüssel steckt im Link und wird nie an den Server gesendet.'],
+  open: ['Aç', 'Open', 'Öffnen'], save: ['İndir', 'Download', 'Herunterladen'], wait: ['Açılıyor…', 'Opening…', 'Wird geöffnet…'],
+  bad: ['Bu bağlantı eksik ya da geçersiz. Lütfen size gönderilen bağlantının tamamını kullanın.', 'This link is incomplete or invalid. Please use the full link you were sent.', 'Dieser Link ist unvollständig oder ungültig. Bitte verwenden Sie den vollständigen Link.'],
+  zayo: ['Zayo Kebap · Hollanda', 'Zayo Kebap · Netherlands', 'Zayo Kebap · Niederlande'], ledoner: ['Le Döner · Hollanda', 'Le Döner · Netherlands', 'Le Döner · Niederlande'],
+  sub: ['İş planı · PDF', 'Business plan · PDF', 'Businessplan · PDF'], tr: ['Türkçe', 'Turkish', 'Türkisch'], en: ['İngilizce', 'English', 'Englisch'], de: ['Almanca', 'German', 'Deutsch'],
+};
+const LS = ['tr', 'en', 'de'];
+let L = (() => { try { const s = localStorage.getItem('sv-lang'); if (LS.includes(s)) return s; } catch (e) {} const n = (navigator.language || 'en').slice(0, 2); return LS.includes(n) ? n : 'en'; })();
+const tt = k => T[k][LS.indexOf(L)];
+const b64 = s => Uint8Array.from(atob(s.replace(/-/g, '+').replace(/_/g, '/') + '==='.slice((s.length + 3) % 4)), c => c.charCodeAt(0));
+const keyStr = new URLSearchParams(location.hash.slice(1)).get('k');
+let key = null, man = null;
+async function dec(name) { const r = await fetch(name, { cache: 'force-cache' }); if (!r.ok) throw new Error(r.status); const u = new Uint8Array(await r.arrayBuffer());
+  return crypto.subtle.decrypt({ name: 'AES-GCM', iv: u.slice(0, 12) }, key, u.slice(12)); }
+async function init() {
+  try { if (!keyStr) throw 0; key = await crypto.subtle.importKey('raw', b64(keyStr), 'AES-GCM', false, ['decrypt']); man = JSON.parse(new TextDecoder().decode(await dec('manifest.bin'))); }
+  catch (e) { key = null; man = null; }
+  draw();
+}
+function draw() {
+  document.documentElement.lang = L; document.title = 'Savastana · ' + tt('h');
+  for (const e of document.querySelectorAll('[data-t]')) e.textContent = tt(e.dataset.t);
+  for (const b of document.querySelectorAll('.langs button')) b.setAttribute('aria-pressed', b.dataset.l === L);
+  const out = document.getElementById('out');
+  if (!man) { out.innerHTML = `<div class="msg">${tt('bad')}</div>`; return; }
+  const mb = n => (n / 1048576).toLocaleString(L, { maximumFractionDigits: 1 }) + ' MB';
+  out.innerHTML = '<div class="grid">' + ['zayo', 'ledoner'].map(br => `<div class="card"><h2>${tt(br)}</h2><div class="sub">${tt('sub')}</div><div class="rows">` +
+    man.filter(f => f.brand === br).map(f => `<div class="row"><b>${f.lang.toUpperCase()}</b><span>${tt(f.lang)} · ${mb(f.size)}</span><button type="button" data-id="${f.id}">${tt('open')}</button></div>`).join('') + '</div></div>').join('') + '</div>';
+}
+document.addEventListener('click', async e => {
+  const lb = e.target.closest('.langs button'); if (lb) { L = lb.dataset.l; try { localStorage.setItem('sv-lang', L); } catch (er) {} draw(); return; }
+  const b = e.target.closest('button[data-id]'); if (!b || !man) return; const f = man.find(x => x.id === b.dataset.id);
+  const w = window.open('', '_blank'); b.disabled = true; b.textContent = tt('wait');
+  try { const buf = await dec(f.id + '.bin'), url = URL.createObjectURL(new Blob([buf], { type: 'application/pdf' }));
+    if (w) w.location = url; else { const a = document.createElement('a'); a.href = url; a.download = f.name; a.click(); }
+    const row = b.parentElement; if (!row.querySelector('a')) { const a = document.createElement('a'); a.href = url; a.download = f.name; a.textContent = tt('save'); row.appendChild(a); } }
+  catch (er) { if (w) w.close(); alert(tt('bad')); }
+  b.disabled = false; b.textContent = tt('open');
+});
+init();
+</script>
+</body>
+</html>
