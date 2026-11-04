@@ -99,33 +99,8 @@ section.s { padding: 120px 0; }
 .pj .go a:first-child { color: var(--ink); }
 .pj .go a + a { color: var(--muted); }
 .pj .go a:hover { color: var(--gold); }
-.pj.feat { grid-column: span 2; flex-direction: row; background: var(--dark); color: var(--cream); border-color: var(--dark); }
-.pj.feat .im { flex: 1.25; aspect-ratio: auto; min-height: 340px; }
-.pj.feat .bd { flex: 1; padding: 34px; }
-.pj.feat p, .pj.feat .chips span { color: rgba(245, 241, 233, .72); }
-.pj.feat .chips span { border-color: rgba(245, 241, 233, .2); }
-.pj.feat .go a:first-child { color: var(--gold2); }
-.pj.feat .go a + a { color: rgba(245, 241, 233, .6); }
 .note { margin-top: 26px; font: 500 13px/1.6 var(--mono); color: var(--muted); }
 html[lang="ar"] .note { font-family: var(--sans); }
-
-/* Zayo bölümü */
-.feats { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid rgba(245, 241, 233, .14); }
-.feats li { padding-block: 26px; padding-inline-end: 30px; border-bottom: 1px solid rgba(245, 241, 233, .14); display: grid; grid-template-columns: 44px 1fr; gap: 6px; font-size: 16px; color: rgba(245, 241, 233, .82); }
-.feats li:nth-child(2n) { padding-inline-start: 30px; border-inline-start: 1px solid rgba(245, 241, 233, .14); }
-.feats li i { font: 600 12px/1.8 var(--mono); color: var(--gold2); font-style: normal; }
-.gal { margin-top: 64px; }
-.gal .view { position: relative; aspect-ratio: 16 / 9; border-radius: 22px; overflow: hidden; background: var(--dark2); box-shadow: 0 50px 100px -40px rgba(0, 0, 0, .8), 0 0 0 1px rgba(255, 255, 255, .06); }
-.gal .view img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .6s; }
-.gal .view img.on { opacity: 1; }
-.tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
-.tab { all: unset; cursor: pointer; padding: 11px 16px; border-radius: 999px; border: 1px solid rgba(245, 241, 233, .2); font-size: 14px; color: rgba(245, 241, 233, .7); transition: all .2s; }
-.tab[aria-selected="true"] { background: var(--cream); color: var(--dark); border-color: var(--cream); }
-.cap { margin-top: 16px; font-size: 14px; color: rgba(245, 241, 233, .55); min-height: 1.6em; }
-.decks { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 18px; font-size: 14px; color: rgba(245, 241, 233, .6); }
-.decks a { text-decoration: none; padding: 7px 12px; border-radius: 8px; border: 1px solid rgba(245, 241, 233, .18); font: 600 12px/1 'IBM Plex Mono', monospace; letter-spacing: .08em; color: var(--cream); }
-.decks a:hover { border-color: var(--gold2); color: var(--gold2); }
-.lnote { margin-top: 12px; font-size: 13px; color: rgba(245, 241, 233, .5); }
 
 /* video */
 .player { border-radius: 22px; overflow: hidden; background: #000; box-shadow: 0 40px 90px -40px rgba(40, 28, 8, .5); aspect-ratio: 16 / 9; direction: ltr; }
@@ -138,10 +113,9 @@ html[lang="ar"] .note { font-family: var(--sans); }
 .vctl .dur { margin-inline-start: auto; font: 500 13px 'IBM Plex Mono', monospace; color: var(--muted); }
 
 /* markalar */
-.brands { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.brands { display: grid; grid-template-columns: minmax(0, 640px); gap: 24px; }
 .brand { background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 40px; display: flex; flex-direction: column; min-height: 340px; }
 .brand .mono { width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center; font: 500 30px/1 'Fraunces', serif; color: var(--cream); }
-.brand.z .mono { background: var(--dark); color: var(--gold2); }
 .brand.l .mono { background: #7A2E1F; }
 .brand h3 { margin-top: 28px; }
 .brand p { color: var(--ink2); margin: 14px 0 0; max-width: 46ch; }
@@ -167,7 +141,7 @@ html[dir="rtl"] .credit { text-align: right; }
 .rv.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } .gal .view img, .pj, .pj .im img { transition: none; } }
 
-@media (max-width: 1100px) { .work { grid-template-columns: 1fr 1fr; } .pj.feat { grid-column: span 2; } nav.links { gap: 18px; } }
+@media (max-width: 1100px) { .work { grid-template-columns: 1fr 1fr; } nav.links { gap: 18px; } }
 @media (max-width: 960px) {
   nav.links { display: none; }
   .langs { display: none; }
@@ -178,12 +152,8 @@ html[dir="rtl"] .credit { text-align: right; }
   .stats { grid-template-columns: 1fr 1fr; margin-top: 48px; }
   .stat:nth-child(3) { padding-inline-start: 0; border-inline-start: 0; }
   .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
-  .feats { grid-template-columns: 1fr; }
-  .feats li:nth-child(2n) { padding-inline-start: 0; border-inline-start: 0; }
   section.s { padding: 84px 0; }
   .brand { padding: 30px; min-height: 0; }
-  .pj.feat { flex-direction: column; }
-  .pj.feat .im { min-height: 0; aspect-ratio: 16 / 10; }
 }
 @media (max-width: 640px) {
   .wrap { padding: 0 18px; }
@@ -191,8 +161,6 @@ html[dir="rtl"] .credit { text-align: right; }
   .mark { font-size: 17px; letter-spacing: .26em; }
   .btn { padding: 14px 18px; font-size: 14px; }
   .work { grid-template-columns: 1fr; }
-  .pj.feat { grid-column: auto; }
-  .pj.feat .bd { padding: 26px 24px; }
   .stat b { font-size: 38px; }
   .stat { padding-inline-end: 12px; }
   .stat + .stat { padding-inline-start: 14px; }
@@ -205,7 +173,7 @@ html[dir="rtl"] .credit { text-align: right; }
 <body>
 <header id="hdr"><div class="wrap bar">
   <a class="mark" href="#top">Savast<b>a</b>na</a>
-  <nav class="links"><a href="#work" data-t="nav.work"></a><a href="#twin" data-t="nav.twin"></a><a href="#video" data-t="nav.video"></a><a href="#brands" data-t="nav.brands"></a></nav>
+  <nav class="links"><a href="#work" data-t="nav.work"></a><a href="#video" data-t="nav.video"></a><a href="#brands" data-t="nav.brands"></a></nav>
   <div class="langs" role="group" aria-label="Taal / Language"></div>
   <select class="lsel" id="lsel" aria-label="Taal / Language"></select>
 </div></header>
@@ -219,12 +187,12 @@ html[dir="rtl"] .credit { text-align: right; }
         <p class="lead" data-t="hero.p"></p>
         <div class="btns"><a class="btn pri" href="#work"><span data-t="cta.work"></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 3v10M4 9l4 4 4-4"/></svg></a><a class="btn" href="#video" data-t="cta.video"></a></div>
       </div>
-      <div class="collage rv"><div class="a"><img src="img/p-elite.webp" alt="" data-alt="alt.a"></div><div class="b"><img src="img/kiosk2-en.webp" alt="" data-alt="alt.b"></div><div class="c"><img src="img/p-ninja.webp" alt="" data-alt="alt.c"></div></div>
+      <div class="collage rv"><div class="a"><img src="img/p-elite.webp" alt="" data-alt="alt.a"></div><div class="b"><img src="img/p-grill.webp" alt="" data-alt="alt.b"></div><div class="c"><img src="img/p-ninja.webp" alt="" data-alt="alt.c"></div></div>
     </div>
     <div class="stats rv">
-      <div class="stat"><b data-n="7"></b><span data-t="st.1"></span></div>
+      <div class="stat"><b data-n="6"></b><span data-t="st.1"></span></div>
       <div class="stat"><b data-n="6"></b><span data-t="st.2"></span></div>
-      <div class="stat"><b data-n="7"></b><span data-t="st.3"></span></div>
+      <div class="stat"><b data-n="6"></b><span data-t="st.3"></span></div>
       <div class="stat"><b data-n="6"></b><span data-t="st.4"></span></div>
     </div>
   </div></section>
@@ -236,23 +204,6 @@ html[dir="rtl"] .credit { text-align: right; }
     </div>
     <div class="work" id="workGrid"></div>
     <p class="note rv" data-t="w.note"></p>
-  </div></section>
-
-  <section class="s dk" id="twin"><div class="wrap">
-    <div class="head">
-      <div class="rv"><div class="eyebrow" data-t="tw.eye"></div><h2 data-t="tw.h" data-html></h2></div>
-      <div class="rv"><p class="lead" style="margin:0" data-t="tw.p"></p>
-        <div class="btns"><a class="btn pri" data-href="demo" target="_blank" rel="noopener" data-t="cta.demo"></a><a class="btn" data-href="tour" target="_blank" rel="noopener" data-t="cta.tour"></a><a class="btn" data-href="help" target="_blank" rel="noopener" data-t="cta.help"></a></div>
-        <div class="decks"><span data-t="tw.deck"></span><a data-href="deck-tr" target="_blank" rel="noopener">TR</a><a data-href="deck-en" target="_blank" rel="noopener">EN</a><a data-href="deck-de" target="_blank" rel="noopener">DE</a></div>
-        <p class="lnote" data-t="tw.lang"></p>
-      </div>
-    </div>
-    <ul class="feats rv"><li><i>01</i><span data-t="f.1"></span></li><li><i>02</i><span data-t="f.2"></span></li><li><i>03</i><span data-t="f.3"></span></li><li><i>04</i><span data-t="f.4"></span></li></ul>
-    <div class="gal rv">
-      <div class="view" id="gview"><img data-img="store" alt=""><img data-img="kiosk2" alt=""><img data-img="cargo" alt=""><img data-img="tower" alt=""><img data-img="hero" alt=""></div>
-      <div class="tabs" role="tablist"><button class="tab" role="tab" data-g="0" data-t="g.0"></button><button class="tab" role="tab" data-g="1" data-t="g.1"></button><button class="tab" role="tab" data-g="2" data-t="g.2"></button><button class="tab" role="tab" data-g="3" data-t="g.3"></button><button class="tab" role="tab" data-g="4" data-t="g.4"></button></div>
-      <div class="cap" id="gcap" aria-live="polite"></div>
-    </div>
   </div></section>
 
   <section class="s" id="video"><div class="wrap">
@@ -272,8 +223,6 @@ html[dir="rtl"] .credit { text-align: right; }
       <p class="lead rv" style="margin:0" data-t="b.p"></p>
     </div>
     <div class="brands">
-      <article class="brand z rv"><div class="mono">Z</div><h3>Zayo Kebap</h3><p data-t="b.z"></p>
-        <div class="meta"><span data-t="b.plan"></span><span class="ln"><span>TR</span><span>EN</span><span>DE</span></span><span class="lk"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg><span data-t="b.priv"></span></span></div></article>
       <article class="brand l rv"><div class="mono">L</div><h3>Le Döner</h3><p data-t="b.l"></p>
         <div class="meta"><span data-t="b.plan"></span><span class="ln"><span>TR</span><span>EN</span><span>DE</span></span><span class="lk"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg><span data-t="b.priv"></span></span></div></article>
     </div>
@@ -282,88 +231,56 @@ html[dir="rtl"] .credit { text-align: right; }
 
 <footer class="dk"><div class="wrap">
   <div class="top"><div class="big">Savast<b>a</b>na</div>
-    <nav><a href="#work" data-t="nav.work"></a><a href="#twin" data-t="nav.twin"></a><a href="#video" data-t="nav.video"></a><a href="#brands" data-t="nav.brands"></a></nav></div>
+    <nav><a href="#work" data-t="nav.work"></a><a href="#video" data-t="nav.video"></a><a href="#brands" data-t="nav.brands"></a></nav></div>
   <p class="credit">Carefully and with love presented by <b>Faruk Kilic &amp; Eyup Yilmaz</b> (2026)</p>
 </div></footer>
 
 <script>
 // Bağlantılar tek yerde: alan adları bağlanınca yalnızca bu satırlar değişir
-const DEMO = 'https://zayo.savastana.com/';   // tüm bağlantılar savastana.com altında
-const DECK = { tr: 'Zayo-NL-Operasyon-Ikizi-Sunum.pdf', en: 'Zayo-NL-Operations-Twin-Presentation-EN.pdf', de: 'Zayo-NL-Betriebs-Zwilling-Praesentation-DE.pdf' };
 const LS = ['nl', 'en', 'de', 'fr', 'tr', 'ar'], LN = { nl: 'Nederlands', en: 'English', de: 'Deutsch', fr: 'Français', tr: 'Türkçe', ar: 'العربية' };
 const LOC = { nl: 'nl-NL', en: 'en-GB', de: 'de-DE', fr: 'fr-FR', tr: 'tr-TR', ar: 'ar-u-nu-latn' };
 const TW = l => ['tr', 'en', 'de'].includes(l) ? l : 'en';   // ikiz, video ve sunum yalnızca TR/EN/DE
 // metinler: [nl, en, de, fr, tr, ar]
 const T = {
   title: ['Savastana · Nederland', 'Savastana · Netherlands', 'Savastana · Niederlande', 'Savastana · Pays-Bas', 'Savastana · Hollanda', 'Savastana · هولندا'],
-  'nav.work': ['Werk', 'Work', 'Projekte', 'Projets', 'İşler', 'الأعمال'], 'nav.twin': ['Zayo NL', 'Zayo NL', 'Zayo NL', 'Zayo NL', 'Zayo NL', 'Zayo NL'],
-  'nav.video': ['Procesvideo', 'Process video', 'Prozessvideo', 'Vidéo', 'Süreç videosu', 'الفيديو'], 'nav.brands': ['Merken', 'Brands', 'Marken', 'Marques', 'Markalar', 'العلامات'],
+  'nav.work': ['Werk', 'Work', 'Projekte', 'Projets', 'İşler', 'الأعمال'],
+  'nav.video': ['Procesvideo', 'Process video', 'Prozessvideo', 'Vidéo', 'Süreç videosu', 'الفيديو'], 'nav.brands': ['Plan', 'Plan', 'Plan', 'Plan', 'Plan', 'الخطة'],
   'hero.eye': ['Savastana · Nederland', 'Savastana · Netherlands', 'Savastana · Niederlande', 'Savastana · Pays-Bas', 'Savastana · Hollanda', 'Savastana · هولندا'],
   'hero.h': ['Apps, 3D-panelen en plannen voor ondernemers in de <em>Lage Landen</em>.', 'Apps, 3D panels and plans for businesses in the <em>Low Countries</em>.', 'Apps, 3D-Panels und Pläne für Unternehmen im <em>Benelux</em>.',
              'Applications, tableaux 3D et plans pour les entreprises du <em>Benelux</em>.', 'Benelüks\'teki işletmeler için uygulamalar, 3D paneller ve <em>planlar</em>.', 'تطبيقات ولوحات ثلاثية الأبعاد وخطط للشركات في <em>البنلوكس</em>.'],
-  'hero.p': ['Voor restaurants, klinieken, salons en een dönerketen bouwden we werkende demo’s: apps voor gasten en klanten, beheerpanelen in 3D, websites en uitlegvideo’s. Klik ze zelf door.',
-             'For restaurants, clinics, salons and a döner chain we built working demos: apps for guests and clients, management panels in 3D, websites and explainer videos. Click through them yourself.',
-             'Für Restaurants, Kliniken, Salons und eine Döner-Kette haben wir funktionierende Demos gebaut: Apps für Gäste und Kunden, Verwaltungspanels in 3D, Websites und Erklärvideos. Klicken Sie sich selbst durch.',
-             'Pour des restaurants, des cliniques, des salons et une chaîne de döner, nous avons créé des démos qui fonctionnent : applications clients, tableaux de bord en 3D, sites web et vidéos explicatives. Essayez-les vous-même.',
-             'Restoranlar, klinikler, salonlar ve bir döner zinciri için çalışan demolar hazırladık: misafir ve müşteri uygulamaları, 3D yönetim panelleri, web siteleri ve tanıtım videoları. Kendiniz tıklayıp gezin.',
-             'صمّمنا عروضًا تعمل فعليًا لمطاعم وعيادات وصالونات وسلسلة دونر: تطبيقات للضيوف والعملاء، ولوحات إدارة ثلاثية الأبعاد، ومواقع إلكترونية، وفيديوهات تعريفية. جرّبها بنفسك.'],
+  'hero.p': ['Voor restaurants, klinieken en salons bouwden we werkende demo’s: apps voor gasten en klanten, beheerpanelen in 3D, websites en uitlegvideo’s. Klik ze zelf door.',
+             'For restaurants, clinics and salons we built working demos: apps for guests and clients, management panels in 3D, websites and explainer videos. Click through them yourself.',
+             'Für Restaurants, Kliniken und Salons haben wir funktionierende Demos gebaut: Apps für Gäste und Kunden, Verwaltungspanels in 3D, Websites und Erklärvideos. Klicken Sie sich selbst durch.',
+             'Pour des restaurants, des cliniques et des salons, nous avons créé des démos qui fonctionnent : applications clients, tableaux de bord en 3D, sites web et vidéos explicatives. Essayez-les vous-même.',
+             'Restoranlar, klinikler ve salonlar için çalışan demolar hazırladık: misafir ve müşteri uygulamaları, 3D yönetim panelleri, web siteleri ve tanıtım videoları. Kendiniz tıklayıp gezin.',
+             'صمّمنا عروضًا تعمل فعليًا لمطاعم وعيادات وصالونات: تطبيقات للضيوف والعملاء، ولوحات إدارة ثلاثية الأبعاد، ومواقع إلكترونية، وفيديوهات تعريفية. جرّبها بنفسك.'],
   'cta.work': ['Bekijk het werk', 'See the work', 'Projekte ansehen', 'Voir les projets', 'İşleri görün', 'شاهد الأعمال'], 'cta.video': ['Bekijk de video', 'Watch the video', 'Video ansehen', 'Voir la vidéo', 'Videoyu izleyin', 'شاهد الفيديو'],
-  'cta.demo': ['Open de live demo', 'Open the live demo', 'Live-Demo öffnen', 'Ouvrir la démo', 'Canlı demoyu açın', 'افتح العرض المباشر'], 'cta.tour': ['Rondleiding', 'Guided tour', 'Geführter Rundgang', 'Visite guidée', 'Rehberli tur', 'جولة إرشادية'],
-  'cta.help': ['Uitlegvideo en hulp', 'Explainer video and help', 'Erklärvideo und Hilfe', 'Vidéo explicative et aide', 'Tanıtım videosu ve destek', 'فيديو تعريفي ومساعدة'],
   'alt.a': ['Elite Smile: patiënten-app, kliniekpaneel en website', 'Elite Smile: patient app, clinic panel and website', 'Elite Smile: Patienten-App, Klinikpanel und Website', 'Elite Smile : application patients, tableau de la clinique et site', 'Elite Smile: hasta uygulaması, klinik paneli ve web sitesi', 'إيليت سمايل: تطبيق المرضى ولوحة العيادة والموقع'],
-  'alt.b': ['Zayo NL: bestelkiosk met geprinte bon', 'Zayo NL: self-order kiosk with a printed receipt', 'Zayo NL: Bestellkiosk mit gedrucktem Bon', 'Zayo NL : borne de commande et ticket imprimé', 'Zayo NL: self-servis kiosk ve basılan fiş', 'زايو: كشك الطلب الذاتي والإيصال المطبوع'],
+  'alt.b': ['Grill-Point: gasten-app en 3D-keukenscherm', 'Grill-Point: guest app and 3D kitchen screen', 'Grill-Point: Gäste-App und 3D-Küchenbildschirm', 'Grill-Point : application clients et écran de cuisine 3D', 'Grill-Point: misafir uygulaması ve 3D mutfak ekranı', 'Grill-Point: تطبيق للضيوف وشاشة مطبخ ثلاثية الأبعاد'],
   'alt.c': ['Ninja Antwerp: gasten-app, 3D-paneel en website', 'Ninja Antwerp: guest app, 3D panel and website', 'Ninja Antwerp: Gäste-App, 3D-Panel und Website', 'Ninja Antwerp : application clients, tableau 3D et site', 'Ninja Antwerp: misafir uygulaması, 3D panel ve web sitesi', 'نينجا أنتويرب: تطبيق الضيوف ولوحة ثلاثية الأبعاد والموقع'],
   'st.1': ['projecten, allemaal live te bekijken', 'projects, all live to explore', 'Projekte, alle live zum Ausprobieren', 'projets, tous à essayer en direct', 'proje, hepsi canlı', 'مشاريع، جميعها متاحة مباشرةً'],
   'st.2': ['steden in Nederland en Vlaanderen', 'cities in the Netherlands and Flanders', 'Städte in den Niederlanden und Flandern', 'villes aux Pays-Bas et en Flandre', 'şehir: Hollanda ve Flaman bölgesi', 'مدن في هولندا وفلاندرز'],
   'st.3': ['uitleg- en procesvideo’s', 'explainer and process videos', 'Erklär- und Prozessvideos', 'vidéos explicatives et de processus', 'tanıtım ve süreç videosu', 'فيديوهات تعريفية وعن العمليات'],
   'st.4': ['talen op deze site', 'languages on this site', 'Sprachen auf dieser Seite', 'langues sur ce site', 'dil bu sitede', 'لغات على هذا الموقع'],
   'w.eye': ['01 · Werk', '01 · Work', '01 · Projekte', '01 · Projets', '01 · İşler', '01 · الأعمال'],
-  'w.h': ['Zeven projecten, <em>allemaal live</em>.', 'Seven projects, <em>all live</em>.', 'Sieben Projekte, <em>alle live</em>.', 'Sept projets, <em>tous en direct</em>.', 'Yedi proje, <em>hepsi canlı</em>.', 'سبعة مشاريع، <em>كلها مباشرة</em>.'],
+  'w.h': ['Zes projecten, <em>allemaal live</em>.', 'Six projects, <em>all live</em>.', 'Sechs Projekte, <em>alle live</em>.', 'Six projets, <em>tous en direct</em>.', 'Altı proje, <em>hepsi canlı</em>.', 'ستة مشاريع، <em>كلها مباشرة</em>.'],
   'w.p': ['Elk project is een werkende demo voor een echt bedrijf: open de app, het paneel of de website en probeer het zelf.', 'Each project is a working demo for a real business: open the app, the panel or the website and try it yourself.', 'Jedes Projekt ist eine funktionierende Demo für ein echtes Unternehmen: App, Panel oder Website öffnen und selbst ausprobieren.',
           'Chaque projet est une démo fonctionnelle pour une vraie entreprise : ouvrez l’application, le tableau de bord ou le site et essayez.', 'Her proje gerçek bir işletme için çalışan bir demo: uygulamayı, paneli ya da web sitesini açıp kendiniz deneyin.', 'كل مشروع عرض يعمل فعليًا لنشاط تجاري حقيقي: افتح التطبيق أو اللوحة أو الموقع وجرّبه بنفسك.'],
   'w.note': ['Alle demo’s draaien met testgegevens: fictieve gasten en klanten, geen echte bestellingen of betalingen.', 'All demos run on test data: fictional guests and clients, no real orders or payments.', 'Alle Demos laufen mit Testdaten: fiktive Gäste und Kunden, keine echten Bestellungen oder Zahlungen.',
              'Toutes les démos utilisent des données de test : clients fictifs, aucune vraie commande ni aucun vrai paiement.', 'Tüm demolar test verisiyle çalışır: kurgusal misafir ve müşteriler; gerçek sipariş ya da ödeme yoktur.', 'تعمل جميع العروض ببيانات تجريبية: ضيوف وعملاء خياليون، ولا طلبات أو مدفوعات حقيقية.'],
-  open: ['Live demo', 'Live demo', 'Live-Demo', 'Démo en direct', 'Canlı demo', 'العرض المباشر'], vid: ['Video', 'Video', 'Video', 'Vidéo', 'Video', 'الفيديو'], more: ['Meer over Zayo', 'More about Zayo', 'Mehr zu Zayo', 'En savoir plus', 'Zayo ayrıntıları', 'المزيد عن زايو'],
-  'tw.eye': ['02 · Uitgelicht', '02 · Featured', '02 · Im Fokus', '02 · À la une', '02 · Öne çıkan', '02 · مشروع مميز'],
-  'tw.h': ['Zayo NL: van vrachtwagen tot tafel, <em>op één scherm</em>.', 'Zayo NL: from the truck to the table, <em>on one screen</em>.', 'Zayo NL: vom Lkw bis zum Tisch, <em>auf einem Bildschirm</em>.', 'Zayo NL : du camion à la table, <em>sur un seul écran</em>.', 'Zayo NL: tırdan masaya, <em>tek ekranda</em>.', 'زايو هولندا: من الشاحنة إلى الطاولة، <em>على شاشة واحدة</em>.'],
-  'tw.p': ['Een digitale 3D-tweeling die één vrijdag van begin tot eind afspeelt. Klik op alles, spoel de tijd vooruit of terug; het antwoord op elk detail dat een partner of inspecteur kan vragen, zit erin.',
-           'A 3D digital twin that plays one Friday from start to finish. Click on anything, move time forward or back; the answer to every detail a partner or an inspector might ask is inside.',
-           'Ein digitaler 3D-Zwilling, der einen Freitag von Anfang bis Ende abspielt. Alles ist anklickbar, die Zeit lässt sich vor- und zurückspulen; die Antwort auf jedes Detail, das Partner oder Prüfer fragen könnten, steckt darin.',
-           'Un jumeau numérique en 3D qui joue un vendredi du début à la fin. Cliquez sur tout, avancez ou reculez dans le temps ; la réponse à chaque détail qu’un partenaire ou un inspecteur pourrait demander s’y trouve.',
-           'Bir Cuma gününü baştan sona canlı oynatan 3D dijital ikiz. Her şeye tıklanabilir, zaman ileri geri sarılabilir; bir ortağın ya da denetçinin sorabileceği her ayrıntının cevabı içinde.',
-           'توأم رقمي ثلاثي الأبعاد يعرض يوم جمعة كاملًا من البداية إلى النهاية. انقر على أي شيء وحرّك الوقت إلى الأمام أو الخلف؛ ستجد فيه الإجابة عن كل تفصيل قد يسأل عنه شريك أو مفتش.'],
-  'tw.deck': ['Presentatie (pdf):', 'Presentation (PDF):', 'Präsentation (PDF):', 'Présentation (PDF) :', 'Sunum (PDF):', 'العرض التقديمي (PDF):'],
-  'tw.lang': ['De demo is beschikbaar in het Engels, Duits en Turks.', 'The demo is available in English, German and Turkish.', 'Die Demo gibt es auf Englisch, Deutsch und Türkisch.', 'La démo est disponible en anglais, allemand et turc.', 'Demo İngilizce, Almanca ve Türkçe.', 'العرض متاح بالإنجليزية والألمانية والتركية.'],
-  'f.1': ['Van de producent in Duitsland tot de tafel in Eindhoven: vrachtwagen, magazijn, twee elektrische bestelwagens en twaalf winkels.', 'From the producer in Germany to the table in Eindhoven: truck, warehouse, two electric vans and twelve shops.', 'Vom Hersteller in Deutschland bis zum Tisch in Eindhoven: Lkw, Lager, zwei E-Transporter und zwölf Läden.',
-          'Du producteur en Allemagne à la table à Eindhoven : camion, entrepôt, deux utilitaires électriques et douze restaurants.', 'Almanya\'daki üreticiden Eindhoven\'daki masaya: tır, depo, iki elektrikli kamyonet ve on iki mağaza.', 'من المنتِج في ألمانيا إلى الطاولة في أيندهوفن: شاحنة ومستودع وشاحنتان كهربائيتان واثنا عشر مطعمًا.'],
-  'f.2': ['Een bestelkiosk met echte foto’s: zelf bestellen met pinautomaat, QR-scanner en bonprinter.', 'A self-order kiosk with real photos: order yourself with the card terminal, QR scanner and receipt printer.', 'Ein Bestellkiosk mit echten Fotos: selbst bestellen mit Kartenterminal, QR-Scanner und Bondrucker.',
-          'Une borne de commande avec de vraies photos : commandez vous-même avec le terminal de paiement, le scanner QR et l’imprimante à tickets.', 'Gerçek fotoğraflı self-servis kiosk: kart terminali, QR okuyucu ve fiş yazıcısıyla kendin sipariş ver.', 'كشك طلب ذاتي بصور حقيقية: اطلب بنفسك عبر جهاز الدفع وماسح QR وطابعة الإيصالات.'],
-  'f.3': ['Elk detail: bestuurderskaart, palletscans, het voedselveiligheidslogboek en tracering van de spies terug tot de producent.', 'Every detail: driver card, pallet scans, the food-safety log and tracing from the cone back to the producer.', 'Jedes Detail: Fahrerkarte, Paletten-Scans, das Lebensmittelsicherheits-Protokoll und die Rückverfolgung vom Spieß bis zum Hersteller.',
-          'Chaque détail : carte conducteur, scans des palettes, registre de sécurité alimentaire et traçabilité de la broche jusqu’au producteur.', 'Her ayrıntı: sürücü kartı, palet okutmaları, gıda güvenliği kaydı ve şişten üreticiye parti izleme.', 'كل التفاصيل: بطاقة السائق، ومسح المنصّات، وسجل سلامة الغذاء، وتتبّع الدفعة من السيخ حتى المنتِج.'],
-  'f.4': ['Automatiseringscentrum en controletoren: alles volgens de regel gaat vanzelf, uitzonderingen komen in één goedkeuringsbak.', 'Automation centre and control tower: everything that follows the rule runs by itself, exceptions land in one inbox.', 'Automatisierungszentrale und Kontrollturm: alles nach Regel läuft von selbst, Ausnahmen landen in einem Eingang.',
-          'Centre d’automatisation et tour de contrôle : tout ce qui suit la règle se fait seul, les exceptions arrivent dans une seule boîte de validation.', 'Otomasyon merkezi ve kontrol kulesi: kurala uyan her iş otomatik, istisnalar tek onay kutusunda.', 'مركز الأتمتة وبرج المراقبة: كل ما يتبع القاعدة يجري تلقائيًا، والاستثناءات تصل إلى صندوق موافقة واحد.'],
-  'g.0': ['Winkel', 'Shop', 'Laden', 'Restaurant', 'Mağaza', 'المطعم'], 'g.1': ['Kiosk', 'Kiosk', 'Kiosk', 'Borne', 'Kiosk', 'الكشك'], 'g.2': ['In de vrachtwagen', 'Inside the truck', 'Im Lkw', 'Dans le camion', 'Tırın içi', 'داخل الشاحنة'],
-  'g.3': ['Controletoren', 'Control tower', 'Kontrollturm', 'Tour de contrôle', 'Kontrol kulesi', 'برج المراقبة'], 'g.4': ['Stad', 'City', 'Stadt', 'Ville', 'Şehir', 'المدينة'],
-  'c.0': ['Tafels, bestellingen, dönerspiesen en rietjes, live.', 'Tables, orders, döner cones and straws, live.', 'Tische, Bestellungen, Dönerspieße und Strohhalme, live.', 'Tables, commandes, broches de döner et pailles, en direct.', 'Masalar, siparişler, döner şişleri ve pipetler canlı.', 'الطاولات والطلبات وأسياخ الدونر والمصّاصات، مباشرةً.'],
-  'c.1': ['Bestelnummer, de geprinte bon, 9% btw en de betaalwijze.', 'Order number, the printed receipt, 9% VAT and the payment method.', 'Bestellnummer, gedruckter Bon, 9 % MwSt. und Zahlungsart.', 'Numéro de commande, ticket imprimé, TVA à 9 % et moyen de paiement.', 'Sipariş numarası, basılan fiş, %9 KDV ve ödeme şekli.', 'رقم الطلب والإيصال المطبوع وضريبة 9٪ وطريقة الدفع.'],
-  'c.2': ['5 pallets, −20 °C, een verzegelde deur en een scan per pallet.', '5 pallets, −20 °C, a sealed door and a scan for every pallet.', '5 Paletten, −20 °C, verplombte Tür und ein Scan für jede Palette.', '5 palettes, −20 °C, une porte scellée et un scan par palette.', '5 palet, −20 °C, mühürlü kapı ve her paletin okutması.', '5 منصّات، −20 °م، باب مختوم ومسح لكل منصّة.'],
-  'c.3': ['Bestellingen, omzet, voertuigen en de koudeketen in één oogopslag.', 'Orders, sales, vehicles and the cold chain at a glance.', 'Bestellungen, Umsatz, Fahrzeuge und Kühlkette auf einen Blick.', 'Commandes, chiffre d’affaires, véhicules et chaîne du froid d’un coup d’œil.', 'Siparişler, ciro, araçlar ve soğuk zincir tek bakışta.', 'الطلبات والإيرادات والمركبات وسلسلة التبريد بنظرة واحدة.'],
-  'c.4': ['Twaalf winkels in Eindhoven, het magazijn en de routes van twee elektrische bestelwagens.', 'Twelve shops in Eindhoven, the warehouse and the routes of two electric vans.', 'Zwölf Läden in Eindhoven, das Lager und die Touren der zwei E-Transporter.', 'Douze restaurants à Eindhoven, l’entrepôt et les tournées de deux utilitaires électriques.', 'Eindhoven\'da on iki mağaza, depo ve iki elektrikli kamyonetin rotası.', 'اثنا عشر مطعمًا في أيندهوفن والمستودع ومسارات الشاحنتين الكهربائيتين.'],
-  'v.eye': ['03 · Procesvideo', '03 · Process video', '03 · Prozessvideo', '03 · Vidéo du processus', '03 · Süreç videosu', '03 · فيديو العملية'],
+  open: ['Live demo', 'Live demo', 'Live-Demo', 'Démo en direct', 'Canlı demo', 'العرض المباشر'], vid: ['Video', 'Video', 'Video', 'Vidéo', 'Video', 'الفيديو'],
+  'v.eye': ['02 · Procesvideo', '02 · Process video', '02 · Prozessvideo', '02 · Vidéo du processus', '02 · Süreç videosu', '02 · فيديو العملية'],
   'v.h': ['Van Duitsland naar <em>Eindhoven</em>.', 'From Germany to <em>Eindhoven</em>.', 'Von Deutschland nach <em>Eindhoven</em>.', 'De l’Allemagne à <em>Eindhoven</em>.', 'Almanya\'dan <em>Eindhoven\'a</em>.', 'من ألمانيا إلى <em>أيندهوفن</em>.'],
   'v.p': ['Hoe een döner-franchisenetwerk werkt, van het vlees tot het rietje. Een procesvideo van drie minuten zonder merknamen, met voice-over of alleen muziek.', 'How a döner franchise network works, from the meat to the straw. A three-minute process video without brand names, narrated or with music only.',
           'Wie ein Döner-Franchise-Netz funktioniert, vom Fleisch bis zum Strohhalm. Ein dreiminütiges Prozessvideo ohne Markennamen, mit Sprecher oder nur mit Musik.', 'Comment fonctionne un réseau de franchise de döner, de la viande à la paille. Une vidéo de trois minutes sans nom de marque, commentée ou en musique seule.',
           'Bir döner franchise ağı nasıl çalışır: etten pipete. Üç dakikalık, markasız bir süreç videosu; anlatımlı ya da yalnızca müzikli.', 'كيف تعمل شبكة امتياز للدونر، من اللحم إلى المصّاصة. فيديو مدته ثلاث دقائق بلا أسماء علامات تجارية، بتعليق صوتي أو بالموسيقى فقط.'],
   'v.voice': ['Met voice-over', 'Narrated', 'Mit Sprecher', 'Commentée', 'Anlatımlı', 'بتعليق صوتي'], 'v.music': ['Alleen muziek', 'Music only', 'Nur Musik', 'Musique seule', 'Yalnızca müzik', 'موسيقى فقط'],
   'v.lang': ['Taal:', 'Language:', 'Sprache:', 'Langue :', 'Dil:', 'اللغة:'], 'v.dur': ['2:57 · 1080p', '2:57 · 1080p', '2:57 · 1080p', '2:57 · 1080p', '2:57 · 1080p', '2:57 · 1080p'],
-  'b.eye': ['04 · Merken', '04 · Brands', '04 · Marken', '04 · Marques', '04 · Markalar', '04 · العلامات التجارية'],
-  'b.h': ['<em>Twee merken</em> voor Nederland.', '<em>Two brands</em> for the Netherlands.', '<em>Zwei Marken</em> für die Niederlande.', '<em>Deux marques</em> pour les Pays-Bas.', 'Hollanda için <em>iki marka</em>.', '<em>علامتان تجاريتان</em> لهولندا.'],
-  'b.p': ['Voor elk merk is een ondernemingsplan geschreven in het Turks, Engels en Duits, uit één bron. De plannen delen we alleen via een privélink.', 'For each brand a business plan was written in Turkish, English and German from one source. The plans are shared only by private link.',
-          'Für jede Marke wurde ein Businessplan auf Türkisch, Englisch und Deutsch aus einer Quelle erstellt. Die Pläne teilen wir nur per privatem Link.', 'Pour chaque marque, un business plan a été rédigé en turc, en anglais et en allemand à partir d’une seule source. Les plans ne sont partagés que par lien privé.',
-          'Her marka için Türkçe, İngilizce ve Almanca iş planı tek kaynaktan hazırlandı. Planlar yalnızca özel bağlantıyla paylaşılır.', 'لكل علامة تجارية خطة عمل مكتوبة بالتركية والإنجليزية والألمانية من مصدر واحد. لا نشارك الخطط إلا عبر رابط خاص.'],
-  'b.z': ['Een keten in drive-thru-, stads-, express- en evenementformaat. Het plan beslaat locaties, investering, de toeleveringsketen en groei; de digitale tweeling draait op de cijfers ervan.', 'A chain in drive-thru, city, express and event formats. The plan covers locations, investment, the supply chain and growth; the digital twin runs on its figures.',
-          'Eine Kette in den Formaten Drive-thru, City, Express und Event. Der Plan umfasst Standorte, Investition, Lieferkette und Wachstum; der digitale Zwilling läuft mit seinen Zahlen.', 'Une chaîne aux formats drive, centre-ville, express et événementiel. Le plan couvre les emplacements, l’investissement, la chaîne d’approvisionnement et la croissance ; le jumeau numérique fonctionne avec ses chiffres.',
-          'Drive-thru, şehir, ekspres ve etkinlik formatlarında bir zincir. Plan konumları, yatırımı, tedarik zincirini ve büyümeyi kapsıyor; dijital ikiz bu planın rakamlarıyla çalışıyor.', 'سلسلة بصيغ الطلب من السيارة والمدينة والسريعة والفعاليات. تغطي الخطة المواقع والاستثمار وسلسلة التوريد والنمو؛ ويعمل التوأم الرقمي بأرقامها.'],
+  'b.eye': ['03 · Plan', '03 · Plan', '03 · Plan', '03 · Plan', '03 · Plan', '03 · الخطة'],
+  'b.h': ['Een <em>ondernemingsplan</em> voor Nederland.', 'A <em>business plan</em> for the Netherlands.', 'Ein <em>Businessplan</em> für die Niederlande.', 'Un <em>business plan</em> pour les Pays-Bas.', 'Hollanda için bir <em>iş planı</em>.', '<em>خطة عمل</em> لهولندا.'],
+  'b.p': ['Het plan is geschreven in het Turks, Engels en Duits, uit één bron. We delen het alleen via een privélink.', 'The plan was written in Turkish, English and German from one source. We share it only by private link.',
+          'Der Plan wurde auf Türkisch, Englisch und Deutsch aus einer Quelle erstellt. Wir teilen ihn nur per privatem Link.', 'Le plan a été rédigé en turc, en anglais et en allemand à partir d’une seule source. Nous ne le partageons que par lien privé.',
+          'Plan Türkçe, İngilizce ve Almanca olarak tek kaynaktan hazırlandı. Yalnızca özel bağlantıyla paylaşılır.', 'كُتبت الخطة بالتركية والإنجليزية والألمانية من مصدر واحد. لا نشاركها إلا عبر رابط خاص.'],
   'b.l': ['Een franchise-ondernemingsplan voor de Nederlandse markt: markt, locaties, investering en bedrijfsmodel, in drie talen uit één bron.', 'A franchise business plan for the Dutch market: market, locations, investment and operating model, in three languages from one source.',
           'Ein Franchise-Businessplan für den niederländischen Markt: Markt, Standorte, Investition und Betriebsmodell, in drei Sprachen aus einer Quelle.', 'Un business plan de franchise pour le marché néerlandais : marché, emplacements, investissement et modèle d’exploitation, en trois langues à partir d’une seule source.',
           'Hollanda pazarı için hazırlanmış franchise iş planı: pazar, konumlar, yatırım ve işletme modeli, tek kaynaktan üç dilde.', 'خطة عمل امتياز للسوق الهولندية: السوق والمواقع والاستثمار ونموذج التشغيل، بثلاث لغات من مصدر واحد.'],
@@ -371,22 +288,14 @@ const T = {
   // sektörler ve yapılanlar
   's.horeca': ['Horeca', 'Hospitality', 'Gastronomie', 'Restauration', 'Restoran', 'مطاعم'], 's.skin': ['Huidkliniek', 'Skin clinic', 'Hautklinik', 'Clinique de la peau', 'Cilt kliniği', 'عيادة جلدية'],
   's.dental': ['Tandartspraktijk', 'Dental clinic', 'Zahnarztpraxis', 'Cabinet dentaire', 'Diş kliniği', 'عيادة أسنان'], 's.beauty': ['Beautystudio', 'Beauty studio', 'Beautystudio', 'Institut de beauté', 'Güzellik stüdyosu', 'استوديو تجميل'],
-  's.hair': ['Kapsalon', 'Hair salon', 'Friseursalon', 'Salon de coiffure', 'Kuaför', 'صالون شعر'], 's.franchise': ['Franchise', 'Franchise', 'Franchise', 'Franchise', 'Franchise', 'امتياز تجاري'],
+  's.hair': ['Kapsalon', 'Hair salon', 'Friseursalon', 'Salon de coiffure', 'Kuaför', 'صالون شعر'],
   'k.app': ['App', 'App', 'App', 'Application', 'Uygulama', 'تطبيق'], 'k.panel': ['3D-paneel', '3D panel', '3D-Panel', 'Tableau 3D', '3D panel', 'لوحة ثلاثية الأبعاد'],
   'k.kitchen': ['3D-keukenscherm', '3D kitchen screen', '3D-Küchenbildschirm', 'Écran cuisine 3D', '3D mutfak ekranı', 'شاشة مطبخ ثلاثية الأبعاد'], 'k.salon': ['3D-salonscherm', '3D salon screen', '3D-Salonbildschirm', 'Écran salon 3D', '3D salon ekranı', 'شاشة صالون ثلاثية الأبعاد'],
   'k.web': ['Website', 'Website', 'Website', 'Site web', 'Web sitesi', 'موقع إلكتروني'], 'k.video': ['Uitlegvideo', 'Explainer video', 'Erklärvideo', 'Vidéo explicative', 'Tanıtım videosu', 'فيديو تعريفي'],
-  'k.shop': ['Webshop', 'Webshop', 'Webshop', 'Boutique en ligne', 'Online mağaza', 'متجر إلكتروني'], 'k.twin': ['Digitale tweeling', 'Digital twin', 'Digitaler Zwilling', 'Jumeau numérique', 'Dijital ikiz', 'توأم رقمي'],
-  'k.kiosk': ['Bestelkiosk', 'Self-order kiosk', 'Bestellkiosk', 'Borne de commande', 'Self-servis kiosk', 'كشك طلب ذاتي'], 'k.plans': ['Ondernemingsplannen', 'Business plans', 'Businesspläne', 'Business plans', 'İş planları', 'خطط عمل'],
+  'k.shop': ['Webshop', 'Webshop', 'Webshop', 'Boutique en ligne', 'Online mağaza', 'متجر إلكتروني'],
 };
-// işler: Hollanda'daki işler (Zayo öne çıkar); açıklamalar [nl, en, de, fr, tr, ar]
+// işler: Hollanda'daki işler; açıklamalar [nl, en, de, fr, tr, ar]
 const P = [
-  { id: 'zayo', name: 'Zayo NL', city: 'Eindhoven', s: 'franchise', k: ['twin', 'kiosk', 'video', 'plans'], img: 'img/kiosk2-en.webp', url: null, feat: true,
-    d: ['Een digitale 3D-tweeling van een dönerketen: van producent en vrachtwagen tot magazijn, twaalf winkels en een echte bestelkiosk; plus een procesvideo en ondernemingsplannen.',
-        'A 3D digital twin of a döner chain: from the producer and truck to the warehouse, twelve shops and a real self-order kiosk; plus a process video and business plans.',
-        'Ein digitaler 3D-Zwilling einer Döner-Kette: vom Hersteller und Lkw bis zum Lager, zwölf Läden und einem echten Bestellkiosk; dazu ein Prozessvideo und Businesspläne.',
-        'Un jumeau numérique 3D d’une chaîne de döner : du producteur et du camion à l’entrepôt, douze restaurants et une vraie borne de commande ; plus une vidéo et des business plans.',
-        'Bir döner zincirinin 3D dijital ikizi: üreticiden ve tırdan depoya, on iki mağazaya ve gerçek bir self-servis kioska; süreç videosu ve iş planları.',
-        'توأم رقمي ثلاثي الأبعاد لسلسلة دونر: من المنتِج والشاحنة إلى المستودع واثني عشر مطعمًا وكشك طلب حقيقي؛ مع فيديو للعملية وخطط عمل.'] },
   { id: 'ninja', name: 'Ninja Antwerp', city: 'Antwerpen', s: 'horeca', k: ['app', 'panel', 'web', 'video'], img: 'img/p-ninja.webp', url: 'https://ninja.savastana.com/', video: 'https://ninja.savastana.com/hulp/',
     d: ['Gasten-app, 3D-beheerpaneel en een nieuwe website voor een kebabrestaurant aan de Vlaamsekaai, met live spies, bordpaspoort en een uitlegvideo in het Vlaams.',
         'Guest app, 3D management panel and a new website for a kebab restaurant on the Vlaamsekaai, with a live spit, a plate passport and an explainer video in Flemish.',
@@ -431,31 +340,25 @@ const P = [
         'تطبيق للأعضاء يجرّب اللون والقصّة على صورتك، مع جواز للشعر والصالون مباشرةً، إضافة إلى شاشة صالون ثلاثية الأبعاد ببطاقة لكل كرسي.'] },
 ];
 const pick = () => { const q = new URLSearchParams(location.search).get('lang'); if (LS.includes(q)) return q; try { const s = localStorage.getItem('sv-lang'); if (LS.includes(s)) return s; } catch (e) {} return 'nl'; };
-let L = pick(), gi = 0, mode = 'voice', VL = null;
+let L = pick(), mode = 'voice', VL = null;
 const ix = () => LS.indexOf(L), tt = k => T[k][ix()];
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const ARW = '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11 11 5M6 5h5v5"/></svg>';
-const href = k => { const l = TW(L); return k === 'demo' ? DEMO + '?lang=' + l : k === 'tour' ? DEMO + '?tour=1&lang=' + l : k === 'help' ? DEMO + 'help/?lang=' + l : k.startsWith('deck-') ? DEMO + 'media/deck/' + DECK[k.slice(5)] : '#'; };
 function work() {
   document.getElementById('workGrid').innerHTML = P.map(p => {
-    const go = p.feat ? `<a href="#twin">${esc(tt('more'))} →</a><a href="${href('demo')}" target="_blank" rel="noopener">${esc(tt('open'))} ${ARW}</a>`
-      : `<a href="${p.url}" target="_blank" rel="noopener">${esc(tt('open'))} ${ARW}</a>${p.video ? `<a href="${p.video}" target="_blank" rel="noopener">${esc(tt('vid'))} ${ARW}</a>` : ''}`;
-    return `<article class="pj rv in${p.feat ? ' feat' : ''}"><div class="im"><img src="${p.img}" alt="${esc(p.name)}" loading="lazy"></div><div class="bd"><div class="tag">${esc(tt('s.' + p.s))} · ${esc(p.city)}</div><h3>${esc(p.name)}</h3><p>${esc(p.d[ix()])}</p>`
+    const go = `<a href="${p.url}" target="_blank" rel="noopener">${esc(tt('open'))} ${ARW}</a>${p.video ? `<a href="${p.video}" target="_blank" rel="noopener">${esc(tt('vid'))} ${ARW}</a>` : ''}`;
+    return `<article class="pj rv in"><div class="im"><img src="${p.img}" alt="${esc(p.name)}" loading="lazy"></div><div class="bd"><div class="tag">${esc(tt('s.' + p.s))} · ${esc(p.city)}</div><h3>${esc(p.name)}</h3><p>${esc(p.d[ix()])}</p>`
       + `<div class="chips">${p.k.map(k => `<span>${esc(tt('k.' + k))}</span>`).join('')}</div><div class="go">${go}</div></div></article>`; }).join('');
 }
 function apply() {
   const i = ix(); document.documentElement.lang = L; document.documentElement.dir = L === 'ar' ? 'rtl' : 'ltr'; document.title = T.title[i];
   for (const e of document.querySelectorAll('[data-t]')) { const v = T[e.dataset.t][i]; if (e.hasAttribute('data-html')) e.innerHTML = v; else e.textContent = v; }
   for (const e of document.querySelectorAll('[data-alt]')) e.alt = T[e.dataset.alt][i];
-  for (const e of document.querySelectorAll('[data-img]')) e.src = `img/${e.dataset.img}-${TW(L)}.webp`;
-  for (const e of document.querySelectorAll('[data-href]')) e.href = href(e.dataset.href);
   for (const e of document.querySelectorAll('[data-n]')) e.textContent = (+e.dataset.n).toLocaleString(LOC[L]);
   for (const b of document.querySelectorAll('.langs button')) b.setAttribute('aria-pressed', b.dataset.l === L);
   document.getElementById('lsel').value = L;
-  work(); gal(gi); if (!VL || !['tr', 'en', 'de'].includes(VL)) VL = TW(L); vid(false);
+  work(); if (!VL || !['tr', 'en', 'de'].includes(VL)) VL = TW(L); vid(false);
 }
-function gal(n) { gi = n; const im = document.querySelectorAll('#gview img'); im.forEach((x, j) => { x.classList.toggle('on', j === n); x.alt = T['c.' + j][ix()]; });
-  document.querySelectorAll('.tab').forEach((b, j) => b.setAttribute('aria-selected', j === n)); document.getElementById('gcap').textContent = T['c.' + n][ix()]; }
 function vid(keep) { const v = document.getElementById('vid'), t = keep ? v.currentTime : 0, play = keep && !v.paused;
   const src = `media/process-${VL}${mode === 'music' ? '-music' : ''}.mp4`; if (!v.src.endsWith(src)) { v.src = src; v.poster = `img/poster-${VL}.webp`; v.load(); if (t) v.currentTime = t; if (play) v.play().catch(() => {}); }
   document.querySelectorAll('.chip[data-m]').forEach(c => c.setAttribute('aria-pressed', c.dataset.m === mode)); document.querySelectorAll('.chip[data-vl]').forEach(c => c.setAttribute('aria-pressed', c.dataset.vl === VL)); }
@@ -464,10 +367,8 @@ document.querySelector('.langs').innerHTML = LS.map(l => `<button type="button" 
 document.getElementById('lsel').innerHTML = LS.map(l => `<option value="${l}" lang="${l}">${l.toUpperCase()} · ${LN[l]}</option>`).join('');
 document.querySelectorAll('.langs button').forEach(b => b.addEventListener('click', () => setL(b.dataset.l)));
 document.getElementById('lsel').addEventListener('change', e => setL(e.target.value));
-document.querySelectorAll('.tab').forEach(b => b.addEventListener('click', () => { gal(+b.dataset.g); auto = false; }));
 document.querySelectorAll('.chip[data-m]').forEach(c => c.addEventListener('click', () => { mode = c.dataset.m; vid(true); }));
 document.querySelectorAll('.chip[data-vl]').forEach(c => c.addEventListener('click', () => { VL = c.dataset.vl; vid(true); }));
-let auto = !matchMedia('(prefers-reduced-motion: reduce)').matches; setInterval(() => { if (auto && !document.hidden) gal((gi + 1) % 5); }, 5200);
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
 document.querySelectorAll('.rv').forEach(e => io.observe(e));
 addEventListener('scroll', () => document.getElementById('hdr').classList.toggle('sc', scrollY > 8), { passive: true });
