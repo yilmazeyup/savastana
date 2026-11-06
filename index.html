@@ -3,375 +3,75 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Savastana · Nederland</title>
-<meta name="description" content="Savastana: apps, 3D-panelen, websites, video’s en plannen voor ondernemers in Nederland en Vlaanderen.">
-<meta property="og:title" content="Savastana · Nederland">
-<meta property="og:description" content="Apps, 3D-panelen en plannen voor ondernemers in de Lage Landen.">
+<title>Savastana · Binnenkort</title>
+<meta name="description" content="Savastana: binnenkort online.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Savastana · Binnenkort">
+<meta property="og:description" content="Binnenkort online.">
 <meta property="og:image" content="https://savastana.com/img/og.jpg">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0F0D0A">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@500&family=Noto+Naskh+Arabic:wght@400;500&display=swap">
 <style>
-:root { --bg: #F5F1EA; --paper: #FBF8F3; --ink: #15120E; --ink2: #4A443B; --muted: #8A8174; --line: #E3DACB; --gold: #B8892B; --gold2: #D4AF37; --dark: #0F0D0A; --dark2: #1A1712; --cream: #F5F1E9;
-  --serif: 'Fraunces', Georgia, serif; --sans: 'Inter', system-ui, sans-serif; --mono: 'IBM Plex Mono', ui-monospace, monospace; --r: 18px; --max: 1240px; }
-html[lang="ar"] { --serif: 'Noto Naskh Arabic', 'Fraunces', serif; --sans: 'IBM Plex Sans Arabic', 'Inter', sans-serif; }
+/* Yakında sayfası: tek ekran, koyu zemin, altın vurgu. Proje bağlantıları burada listelenmez. */
+:root { --bg: #0F0D0A; --ink: #F5F1E9; --muted: rgba(245, 241, 233, .58); --line: rgba(245, 241, 233, .16); --gold: #D4AF37;
+  --serif: 'Fraunces', Georgia, serif; --sans: 'Inter', system-ui, sans-serif; --mono: 'IBM Plex Mono', ui-monospace, monospace; color-scheme: dark; }
+html[lang="ar"] { --serif: 'Noto Naskh Arabic', 'Fraunces', serif; --sans: 'Noto Naskh Arabic', 'Inter', sans-serif; }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
-img, video { display: block; max-width: 100%; }
-a { color: inherit; }
-.wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
-.eyebrow { font: 600 12px/1.4 var(--mono); letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
-h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -.015em; margin: 0; text-wrap: balance; }
-h1 { font-size: clamp(42px, 6vw, 86px); line-height: 1; font-variation-settings: 'opsz' 144; }
-h2 { font-size: clamp(34px, 4.4vw, 60px); line-height: 1.04; font-variation-settings: 'opsz' 120; }
-h3 { font-size: 28px; line-height: 1.12; }
-h1 em, h2 em { font-style: italic; color: var(--gold); }
-html[lang="ar"] .eyebrow, html[lang="ar"] .stat span, html[lang="ar"] .tag { letter-spacing: 0; font-family: var(--sans); }
-html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3 { letter-spacing: 0; line-height: 1.35; }
-html[lang="ar"] h1 em, html[lang="ar"] h2 em { font-style: normal; }
-.lead { font-size: clamp(17px, 1.5vw, 20px); color: var(--ink2); max-width: 48ch; margin: 26px 0 0; text-wrap: pretty; }
-
-/* üst çubuk */
-header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 84%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid transparent; transition: border-color .3s; }
-header.sc { border-bottom-color: var(--line); }
-.bar { display: flex; align-items: center; gap: 26px; height: 72px; }
-.mark { font: 500 21px/1 'Fraunces', Georgia, serif; letter-spacing: .32em; text-decoration: none; text-transform: uppercase; direction: ltr; }
-.mark b { color: var(--gold); font-weight: 500; }
-nav.links { display: flex; gap: 24px; margin-inline-start: auto; }
-nav.links a { text-decoration: none; font-size: 15px; color: var(--ink2); transition: color .2s; white-space: nowrap; }
-nav.links a:hover { color: var(--ink); }
-.langs { display: flex; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; direction: ltr; }
-.langs button { all: unset; cursor: pointer; font: 600 11px/1 'IBM Plex Mono', monospace; letter-spacing: .06em; padding: 8px 9px; border-radius: 999px; color: var(--muted); }
-.langs button[aria-pressed="true"] { background: var(--ink); color: var(--cream); }
-.lsel { display: none; margin-inline-start: auto; font: 600 13px/1 'IBM Plex Mono', monospace; padding: 9px 30px 9px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 4.5 6 7.5l3-3' fill='none' stroke='%2315120E' stroke-width='1.4'/%3E%3C/svg%3E") no-repeat right 10px center / 12px; color: var(--ink); -webkit-appearance: none; appearance: none; }
-.langs button:focus-visible, .btn:focus-visible, .chip:focus-visible, .tab:focus-visible, .lsel:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
-
-/* düğmeler */
-.btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
-.btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 22px; border-radius: 999px; font: 600 15px/1 var(--sans); text-decoration: none; border: 1px solid var(--ink); transition: transform .2s, background .2s, color .2s; }
-.btn:hover { transform: translateY(-1px); }
-.btn.pri { background: var(--ink); color: var(--cream); }
-.btn svg { width: 16px; height: 16px; }
-html[dir="rtl"] .btn svg { transform: scaleX(-1); }
-.dk .btn { border-color: rgba(245, 241, 233, .4); color: var(--cream); }
-.dk .btn.pri { background: var(--gold2); border-color: var(--gold2); color: var(--dark); }
-
-/* giriş */
-.hero { padding: 76px 0 40px; }
-.hero .grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
-.collage { position: relative; aspect-ratio: 4 / 3.3; direction: ltr; }
-.collage > div { position: absolute; border-radius: var(--r); overflow: hidden; box-shadow: 0 40px 80px -30px rgba(40, 28, 8, .45), 0 0 0 1px rgba(40, 28, 8, .08); background: var(--dark2); }
-.collage .a { inset: 0 0 22% 14%; }
-.collage .b { width: 46%; left: 0; bottom: 4%; aspect-ratio: 16 / 10; }
-.collage .c { width: 40%; right: 4%; bottom: 0; aspect-ratio: 16 / 10; }
-.collage img { width: 100%; height: 100%; object-fit: cover; }
-.stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-top: 72px; }
-.stat { padding-block: 28px 26px; padding-inline-end: 24px; }
-.stat + .stat { padding-inline-start: 24px; border-inline-start: 1px solid var(--line); }
-.stat b { display: block; font: 300 48px/1 'Fraunces', Georgia, serif; font-variation-settings: 'opsz' 144; }
-.stat span { display: block; margin-top: 10px; font-size: 14px; color: var(--ink2); }
-
-/* bölümler */
-section.s { padding: 120px 0; }
-.dk { background: var(--dark); color: var(--cream); }
-.dk .lead { color: rgba(245, 241, 233, .72); }
-.head { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: end; margin-bottom: 56px; }
-.head .eyebrow { margin-bottom: 22px; }
-
-/* işler */
-.work { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-.pj { position: relative; display: flex; flex-direction: column; background: var(--paper); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; transition: transform .35s ease, box-shadow .35s ease; }
-.pj:hover { transform: translateY(-4px); box-shadow: 0 30px 60px -30px rgba(40, 28, 8, .35); }
-.pj .im { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--dark2); }
-.pj .im img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform .6s ease; }
-.pj:hover .im img { transform: scale(1.03); }
-.pj .bd { padding: 24px 24px 22px; display: flex; flex-direction: column; flex: 1; }
-.pj .tag { font: 600 11px/1.4 'IBM Plex Mono', monospace; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
-.pj h3 { margin-top: 10px; }
-.pj p { margin: 10px 0 0; font-size: 15px; color: var(--ink2); }
-.pj .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
-.pj .chips span { padding: 5px 9px; border: 1px solid var(--line); border-radius: 999px; font-size: 12px; color: var(--ink2); }
-.pj .go { display: flex; gap: 16px; margin-top: auto; padding-top: 20px; }
-.pj .go a { font: 600 14px/1 var(--sans); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
-.pj .go a:first-child { color: var(--ink); }
-.pj .go a + a { color: var(--muted); }
-.pj .go a:hover { color: var(--gold); }
-.note { margin-top: 26px; font: 500 13px/1.6 var(--mono); color: var(--muted); }
-html[lang="ar"] .note { font-family: var(--sans); }
-
-/* video */
-.player { border-radius: 22px; overflow: hidden; background: #000; box-shadow: 0 40px 90px -40px rgba(40, 28, 8, .5); aspect-ratio: 16 / 9; direction: ltr; }
-.player video { width: 100%; height: 100%; }
-.vctl { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 18px; }
-.chip { all: unset; cursor: pointer; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--line); font-size: 14px; color: var(--ink2); }
-.chip[aria-pressed="true"] { background: var(--ink); color: var(--cream); border-color: var(--ink); }
-.vctl .sep { width: 1px; height: 24px; background: var(--line); margin: 0 6px; }
-.vctl .vl { font-size: 14px; color: var(--muted); }
-.vctl .dur { margin-inline-start: auto; font: 500 13px 'IBM Plex Mono', monospace; color: var(--muted); }
-
-/* markalar */
-.brands { display: grid; grid-template-columns: minmax(0, 640px); gap: 24px; }
-.brand { background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 40px; display: flex; flex-direction: column; min-height: 340px; }
-.brand .mono { width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center; font: 500 30px/1 'Fraunces', serif; color: var(--cream); }
-.brand.l .mono { background: #7A2E1F; }
-.brand h3 { margin-top: 28px; }
-.brand p { color: var(--ink2); margin: 14px 0 0; max-width: 46ch; }
-.brand .meta { margin-top: auto; padding-top: 30px; display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; font-size: 13px; color: var(--muted); }
-.brand .meta .lk { display: inline-flex; align-items: center; gap: 6px; color: var(--ink2); }
-.brand .meta svg { width: 14px; height: 14px; }
-.brand .ln { display: flex; gap: 6px; direction: ltr; }
-.brand .ln span { padding: 4px 8px; border: 1px solid var(--line); border-radius: 6px; font: 600 11px 'IBM Plex Mono', monospace; color: var(--ink2); }
-
-footer { padding: 90px 0 60px; }
-footer .top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; align-items: flex-end; }
-footer .big { font: 300 clamp(48px, 8vw, 120px)/.9 'Fraunces', serif; letter-spacing: .06em; text-transform: uppercase; direction: ltr; }
-footer .big b { color: var(--gold2); font-weight: 300; }
-footer nav { display: flex; flex-wrap: wrap; gap: 22px; }
-footer nav a { text-decoration: none; color: rgba(245, 241, 233, .7); font-size: 15px; }
-footer nav a:hover { color: var(--cream); }
-.credit { margin-top: 60px; padding-top: 28px; border-top: 1px solid rgba(245, 241, 233, .14); font: italic 400 16px/1.6 'Fraunces', serif; color: rgba(245, 241, 233, .6); direction: ltr; text-align: start; }
-html[dir="rtl"] .credit { text-align: right; }
-.credit b { font-style: normal; font-weight: 500; color: var(--gold2); }
-
-/* görünme animasyonu */
-.rv { opacity: 0; transform: translateY(18px); transition: opacity .8s ease, transform .8s ease; }
-.rv.in { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } .gal .view img, .pj, .pj .im img { transition: none; } }
-
-@media (max-width: 1100px) { .work { grid-template-columns: 1fr 1fr; } nav.links { gap: 18px; } }
-@media (max-width: 960px) {
-  nav.links { display: none; }
-  .langs { display: none; }
-  .lsel { display: block; }
-  .hero { padding-top: 48px; }
-  .hero .grid, .head, .brands { grid-template-columns: 1fr; }
-  .head { gap: 20px; }
-  .stats { grid-template-columns: 1fr 1fr; margin-top: 48px; }
-  .stat:nth-child(3) { padding-inline-start: 0; border-inline-start: 0; }
-  .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
-  section.s { padding: 84px 0; }
-  .brand { padding: 30px; min-height: 0; }
-}
-@media (max-width: 640px) {
-  .wrap { padding: 0 18px; }
-  .bar { height: 62px; }
-  .mark { font-size: 17px; letter-spacing: .26em; }
-  .btn { padding: 14px 18px; font-size: 14px; }
-  .work { grid-template-columns: 1fr; }
-  .stat b { font-size: 38px; }
-  .stat { padding-inline-end: 12px; }
-  .stat + .stat { padding-inline-start: 14px; }
-  .stat:nth-child(3) { padding-inline-start: 0; }
-  .vctl .dur { margin-inline-start: 0; width: 100%; }
-  .vctl .sep { display: none; }
-}
+html, body { height: 100%; }
+body { margin: 0; background: radial-gradient(900px 600px at 70% 20%, rgba(212, 175, 55, .10), transparent 60%), var(--bg); color: var(--ink); font: 400 17px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+.page { min-height: 100%; display: grid; grid-template-rows: auto 1fr auto; padding: max(22px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(22px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); max-width: 1240px; margin: 0 auto; }
+header { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.mark { font: 400 20px/1 var(--serif); letter-spacing: .32em; text-transform: uppercase; }
+.mark b, h1 b { font-weight: inherit; color: var(--gold); }
+.langs { display: flex; flex-wrap: wrap; gap: 2px; border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+.langs button { all: unset; cursor: pointer; padding: 6px 10px; border-radius: 999px; font: 500 11px/1 var(--mono); letter-spacing: .08em; color: var(--muted); }
+.langs button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.langs button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+main { display: grid; align-content: center; padding: 48px 0; }
+.eye { font: 500 12px/1.4 var(--mono); letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
+h1 { margin: 22px 0 0; font: 300 clamp(64px, 14vw, 176px)/.92 var(--serif); letter-spacing: -.02em; }
+h1 em { font-style: italic; color: var(--gold); }
+p.lead { margin: 28px 0 0; max-width: 34ch; font-size: clamp(17px, 2vw, 21px); color: var(--muted); }
+.bar { margin-top: 44px; width: min(320px, 70%); height: 1px; background: var(--line); position: relative; overflow: hidden; }
+.bar::after { content: ''; position: absolute; inset: 0; width: 38%; background: var(--gold); animation: run 3.2s cubic-bezier(.6, 0, .4, 1) infinite; }
+@keyframes run { from { translate: -100% 0; } to { translate: 270% 0; } }
+footer { font: italic 400 14px/1.5 var(--serif); color: var(--muted); }
+footer b { font-style: normal; font-weight: 500; color: var(--ink); }
+html[dir="rtl"] .bar::after { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) { .bar::after { animation: none; translate: 80% 0; } }
+@media (max-width: 560px) { .mark { font-size: 16px; letter-spacing: .24em; } .langs button { padding: 6px 7px; } }
 </style>
 </head>
 <body>
-<header id="hdr"><div class="wrap bar">
-  <a class="mark" href="#top">Savast<b>a</b>na</a>
-  <nav class="links"><a href="#work" data-t="nav.work"></a><a href="#video" data-t="nav.video"></a><a href="#brands" data-t="nav.brands"></a></nav>
-  <div class="langs" role="group" aria-label="Taal / Language"></div>
-  <select class="lsel" id="lsel" aria-label="Taal / Language"></select>
-</div></header>
-
-<main id="top">
-  <section class="hero"><div class="wrap">
-    <div class="grid">
-      <div class="rv">
-        <div class="eyebrow" data-t="hero.eye"></div>
-        <h1 style="margin-top:26px" data-t="hero.h" data-html></h1>
-        <p class="lead" data-t="hero.p"></p>
-        <div class="btns"><a class="btn pri" href="#work"><span data-t="cta.work"></span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 3v10M4 9l4 4 4-4"/></svg></a><a class="btn" href="#video" data-t="cta.video"></a></div>
-      </div>
-      <div class="collage rv"><div class="a"><img src="img/p-elite.webp" alt="" data-alt="alt.a"></div><div class="b"><img src="img/p-grill.webp" alt="" data-alt="alt.b"></div><div class="c"><img src="img/p-ninja.webp" alt="" data-alt="alt.c"></div></div>
-    </div>
-    <div class="stats rv">
-      <div class="stat"><b data-n="6"></b><span data-t="st.1"></span></div>
-      <div class="stat"><b data-n="6"></b><span data-t="st.2"></span></div>
-      <div class="stat"><b data-n="6"></b><span data-t="st.3"></span></div>
-      <div class="stat"><b data-n="6"></b><span data-t="st.4"></span></div>
-    </div>
-  </div></section>
-
-  <section class="s" id="work" style="padding-top:60px"><div class="wrap">
-    <div class="head">
-      <div class="rv"><div class="eyebrow" data-t="w.eye"></div><h2 data-t="w.h" data-html></h2></div>
-      <p class="lead rv" style="margin:0" data-t="w.p"></p>
-    </div>
-    <div class="work" id="workGrid"></div>
-    <p class="note rv" data-t="w.note"></p>
-  </div></section>
-
-  <section class="s" id="video"><div class="wrap">
-    <div class="head">
-      <div class="rv"><div class="eyebrow" data-t="v.eye"></div><h2 data-t="v.h" data-html></h2></div>
-      <p class="lead rv" style="margin:0" data-t="v.p"></p>
-    </div>
-    <div class="rv">
-      <div class="player"><video id="vid" controls playsinline preload="metadata"></video></div>
-      <div class="vctl"><button class="chip" type="button" data-m="voice" data-t="v.voice"></button><button class="chip" type="button" data-m="music" data-t="v.music"></button><span class="sep"></span><span class="vl" data-t="v.lang"></span><button class="chip" type="button" data-vl="en">English</button><button class="chip" type="button" data-vl="de">Deutsch</button><button class="chip" type="button" data-vl="tr">Türkçe</button><span class="dur" data-t="v.dur"></span></div>
-    </div>
-  </div></section>
-
-  <section class="s" id="brands" style="padding-top:20px"><div class="wrap">
-    <div class="head">
-      <div class="rv"><div class="eyebrow" data-t="b.eye"></div><h2 data-t="b.h" data-html></h2></div>
-      <p class="lead rv" style="margin:0" data-t="b.p"></p>
-    </div>
-    <div class="brands">
-      <article class="brand l rv"><div class="mono">L</div><h3>Le Döner</h3><p data-t="b.l"></p>
-        <div class="meta"><span data-t="b.plan"></span><span class="ln"><span>TR</span><span>EN</span><span>DE</span></span><span class="lk"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg><span data-t="b.priv"></span></span></div></article>
-    </div>
-  </div></section>
-</main>
-
-<footer class="dk"><div class="wrap">
-  <div class="top"><div class="big">Savast<b>a</b>na</div>
-    <nav><a href="#work" data-t="nav.work"></a><a href="#video" data-t="nav.video"></a><a href="#brands" data-t="nav.brands"></a></nav></div>
-  <p class="credit">Carefully and with love presented by <b>Faruk Kilic &amp; Eyup Yilmaz</b> (2026)</p>
-</div></footer>
-
+<div class="page">
+  <header><div class="mark">Savast<b>a</b>na</div><div class="langs" role="group" aria-label="Taal / Language"></div></header>
+  <main>
+    <div class="eye" data-t="eye"></div>
+    <h1 data-t="h"></h1>
+    <p class="lead" data-t="p"></p>
+    <div class="bar" aria-hidden="true"></div>
+  </main>
+  <footer>Carefully and with love presented by <b>Faruk Kilic &amp; Eyup Yilmaz</b> (2026)</footer>
+</div>
 <script>
-// Bağlantılar tek yerde: alan adları bağlanınca yalnızca bu satırlar değişir
+// metinler: [nl, en, de, fr, tr, ar] — varsayılan Felemenkçe
 const LS = ['nl', 'en', 'de', 'fr', 'tr', 'ar'], LN = { nl: 'Nederlands', en: 'English', de: 'Deutsch', fr: 'Français', tr: 'Türkçe', ar: 'العربية' };
-const LOC = { nl: 'nl-NL', en: 'en-GB', de: 'de-DE', fr: 'fr-FR', tr: 'tr-TR', ar: 'ar-u-nu-latn' };
-const TW = l => ['tr', 'en', 'de'].includes(l) ? l : 'en';   // ikiz, video ve sunum yalnızca TR/EN/DE
-// metinler: [nl, en, de, fr, tr, ar]
 const T = {
-  title: ['Savastana · Nederland', 'Savastana · Netherlands', 'Savastana · Niederlande', 'Savastana · Pays-Bas', 'Savastana · Hollanda', 'Savastana · هولندا'],
-  'nav.work': ['Werk', 'Work', 'Projekte', 'Projets', 'İşler', 'الأعمال'],
-  'nav.video': ['Procesvideo', 'Process video', 'Prozessvideo', 'Vidéo', 'Süreç videosu', 'الفيديو'], 'nav.brands': ['Plan', 'Plan', 'Plan', 'Plan', 'Plan', 'الخطة'],
-  'hero.eye': ['Savastana · Nederland', 'Savastana · Netherlands', 'Savastana · Niederlande', 'Savastana · Pays-Bas', 'Savastana · Hollanda', 'Savastana · هولندا'],
-  'hero.h': ['Apps, 3D-panelen en plannen voor ondernemers in de <em>Lage Landen</em>.', 'Apps, 3D panels and plans for businesses in the <em>Low Countries</em>.', 'Apps, 3D-Panels und Pläne für Unternehmen im <em>Benelux</em>.',
-             'Applications, tableaux 3D et plans pour les entreprises du <em>Benelux</em>.', 'Benelüks\'teki işletmeler için uygulamalar, 3D paneller ve <em>planlar</em>.', 'تطبيقات ولوحات ثلاثية الأبعاد وخطط للشركات في <em>البنلوكس</em>.'],
-  'hero.p': ['Voor restaurants, klinieken en salons bouwden we werkende demo’s: apps voor gasten en klanten, beheerpanelen in 3D, websites en uitlegvideo’s. Klik ze zelf door.',
-             'For restaurants, clinics and salons we built working demos: apps for guests and clients, management panels in 3D, websites and explainer videos. Click through them yourself.',
-             'Für Restaurants, Kliniken und Salons haben wir funktionierende Demos gebaut: Apps für Gäste und Kunden, Verwaltungspanels in 3D, Websites und Erklärvideos. Klicken Sie sich selbst durch.',
-             'Pour des restaurants, des cliniques et des salons, nous avons créé des démos qui fonctionnent : applications clients, tableaux de bord en 3D, sites web et vidéos explicatives. Essayez-les vous-même.',
-             'Restoranlar, klinikler ve salonlar için çalışan demolar hazırladık: misafir ve müşteri uygulamaları, 3D yönetim panelleri, web siteleri ve tanıtım videoları. Kendiniz tıklayıp gezin.',
-             'صمّمنا عروضًا تعمل فعليًا لمطاعم وعيادات وصالونات: تطبيقات للضيوف والعملاء، ولوحات إدارة ثلاثية الأبعاد، ومواقع إلكترونية، وفيديوهات تعريفية. جرّبها بنفسك.'],
-  'cta.work': ['Bekijk het werk', 'See the work', 'Projekte ansehen', 'Voir les projets', 'İşleri görün', 'شاهد الأعمال'], 'cta.video': ['Bekijk de video', 'Watch the video', 'Video ansehen', 'Voir la vidéo', 'Videoyu izleyin', 'شاهد الفيديو'],
-  'alt.a': ['Elite Smile: patiënten-app, kliniekpaneel en website', 'Elite Smile: patient app, clinic panel and website', 'Elite Smile: Patienten-App, Klinikpanel und Website', 'Elite Smile : application patients, tableau de la clinique et site', 'Elite Smile: hasta uygulaması, klinik paneli ve web sitesi', 'إيليت سمايل: تطبيق المرضى ولوحة العيادة والموقع'],
-  'alt.b': ['Grill-Point: gasten-app en 3D-keukenscherm', 'Grill-Point: guest app and 3D kitchen screen', 'Grill-Point: Gäste-App und 3D-Küchenbildschirm', 'Grill-Point : application clients et écran de cuisine 3D', 'Grill-Point: misafir uygulaması ve 3D mutfak ekranı', 'Grill-Point: تطبيق للضيوف وشاشة مطبخ ثلاثية الأبعاد'],
-  'alt.c': ['Ninja Antwerp: gasten-app, 3D-paneel en website', 'Ninja Antwerp: guest app, 3D panel and website', 'Ninja Antwerp: Gäste-App, 3D-Panel und Website', 'Ninja Antwerp : application clients, tableau 3D et site', 'Ninja Antwerp: misafir uygulaması, 3D panel ve web sitesi', 'نينجا أنتويرب: تطبيق الضيوف ولوحة ثلاثية الأبعاد والموقع'],
-  'st.1': ['projecten, allemaal live te bekijken', 'projects, all live to explore', 'Projekte, alle live zum Ausprobieren', 'projets, tous à essayer en direct', 'proje, hepsi canlı', 'مشاريع، جميعها متاحة مباشرةً'],
-  'st.2': ['steden in Nederland en Vlaanderen', 'cities in the Netherlands and Flanders', 'Städte in den Niederlanden und Flandern', 'villes aux Pays-Bas et en Flandre', 'şehir: Hollanda ve Flaman bölgesi', 'مدن في هولندا وفلاندرز'],
-  'st.3': ['uitleg- en procesvideo’s', 'explainer and process videos', 'Erklär- und Prozessvideos', 'vidéos explicatives et de processus', 'tanıtım ve süreç videosu', 'فيديوهات تعريفية وعن العمليات'],
-  'st.4': ['talen op deze site', 'languages on this site', 'Sprachen auf dieser Seite', 'langues sur ce site', 'dil bu sitede', 'لغات على هذا الموقع'],
-  'w.eye': ['01 · Werk', '01 · Work', '01 · Projekte', '01 · Projets', '01 · İşler', '01 · الأعمال'],
-  'w.h': ['Zes projecten, <em>allemaal live</em>.', 'Six projects, <em>all live</em>.', 'Sechs Projekte, <em>alle live</em>.', 'Six projets, <em>tous en direct</em>.', 'Altı proje, <em>hepsi canlı</em>.', 'ستة مشاريع، <em>كلها مباشرة</em>.'],
-  'w.p': ['Elk project is een werkende demo voor een echt bedrijf: open de app, het paneel of de website en probeer het zelf.', 'Each project is a working demo for a real business: open the app, the panel or the website and try it yourself.', 'Jedes Projekt ist eine funktionierende Demo für ein echtes Unternehmen: App, Panel oder Website öffnen und selbst ausprobieren.',
-          'Chaque projet est une démo fonctionnelle pour une vraie entreprise : ouvrez l’application, le tableau de bord ou le site et essayez.', 'Her proje gerçek bir işletme için çalışan bir demo: uygulamayı, paneli ya da web sitesini açıp kendiniz deneyin.', 'كل مشروع عرض يعمل فعليًا لنشاط تجاري حقيقي: افتح التطبيق أو اللوحة أو الموقع وجرّبه بنفسك.'],
-  'w.note': ['Alle demo’s draaien met testgegevens: fictieve gasten en klanten, geen echte bestellingen of betalingen.', 'All demos run on test data: fictional guests and clients, no real orders or payments.', 'Alle Demos laufen mit Testdaten: fiktive Gäste und Kunden, keine echten Bestellungen oder Zahlungen.',
-             'Toutes les démos utilisent des données de test : clients fictifs, aucune vraie commande ni aucun vrai paiement.', 'Tüm demolar test verisiyle çalışır: kurgusal misafir ve müşteriler; gerçek sipariş ya da ödeme yoktur.', 'تعمل جميع العروض ببيانات تجريبية: ضيوف وعملاء خياليون، ولا طلبات أو مدفوعات حقيقية.'],
-  open: ['Live demo', 'Live demo', 'Live-Demo', 'Démo en direct', 'Canlı demo', 'العرض المباشر'], vid: ['Video', 'Video', 'Video', 'Vidéo', 'Video', 'الفيديو'],
-  'v.eye': ['02 · Procesvideo', '02 · Process video', '02 · Prozessvideo', '02 · Vidéo du processus', '02 · Süreç videosu', '02 · فيديو العملية'],
-  'v.h': ['Van Duitsland naar <em>Eindhoven</em>.', 'From Germany to <em>Eindhoven</em>.', 'Von Deutschland nach <em>Eindhoven</em>.', 'De l’Allemagne à <em>Eindhoven</em>.', 'Almanya\'dan <em>Eindhoven\'a</em>.', 'من ألمانيا إلى <em>أيندهوفن</em>.'],
-  'v.p': ['Hoe een döner-franchisenetwerk werkt, van het vlees tot het rietje. Een procesvideo van drie minuten zonder merknamen, met voice-over of alleen muziek.', 'How a döner franchise network works, from the meat to the straw. A three-minute process video without brand names, narrated or with music only.',
-          'Wie ein Döner-Franchise-Netz funktioniert, vom Fleisch bis zum Strohhalm. Ein dreiminütiges Prozessvideo ohne Markennamen, mit Sprecher oder nur mit Musik.', 'Comment fonctionne un réseau de franchise de döner, de la viande à la paille. Une vidéo de trois minutes sans nom de marque, commentée ou en musique seule.',
-          'Bir döner franchise ağı nasıl çalışır: etten pipete. Üç dakikalık, markasız bir süreç videosu; anlatımlı ya da yalnızca müzikli.', 'كيف تعمل شبكة امتياز للدونر، من اللحم إلى المصّاصة. فيديو مدته ثلاث دقائق بلا أسماء علامات تجارية، بتعليق صوتي أو بالموسيقى فقط.'],
-  'v.voice': ['Met voice-over', 'Narrated', 'Mit Sprecher', 'Commentée', 'Anlatımlı', 'بتعليق صوتي'], 'v.music': ['Alleen muziek', 'Music only', 'Nur Musik', 'Musique seule', 'Yalnızca müzik', 'موسيقى فقط'],
-  'v.lang': ['Taal:', 'Language:', 'Sprache:', 'Langue :', 'Dil:', 'اللغة:'], 'v.dur': ['2:57 · 1080p', '2:57 · 1080p', '2:57 · 1080p', '2:57 · 1080p', '2:57 · 1080p', '2:57 · 1080p'],
-  'b.eye': ['03 · Plan', '03 · Plan', '03 · Plan', '03 · Plan', '03 · Plan', '03 · الخطة'],
-  'b.h': ['Een <em>ondernemingsplan</em> voor Nederland.', 'A <em>business plan</em> for the Netherlands.', 'Ein <em>Businessplan</em> für die Niederlande.', 'Un <em>business plan</em> pour les Pays-Bas.', 'Hollanda için bir <em>iş planı</em>.', '<em>خطة عمل</em> لهولندا.'],
-  'b.p': ['Het plan is geschreven in het Turks, Engels en Duits, uit één bron. We delen het alleen via een privélink.', 'The plan was written in Turkish, English and German from one source. We share it only by private link.',
-          'Der Plan wurde auf Türkisch, Englisch und Deutsch aus einer Quelle erstellt. Wir teilen ihn nur per privatem Link.', 'Le plan a été rédigé en turc, en anglais et en allemand à partir d’une seule source. Nous ne le partageons que par lien privé.',
-          'Plan Türkçe, İngilizce ve Almanca olarak tek kaynaktan hazırlandı. Yalnızca özel bağlantıyla paylaşılır.', 'كُتبت الخطة بالتركية والإنجليزية والألمانية من مصدر واحد. لا نشاركها إلا عبر رابط خاص.'],
-  'b.l': ['Een franchise-ondernemingsplan voor de Nederlandse markt: markt, locaties, investering en bedrijfsmodel, in drie talen uit één bron.', 'A franchise business plan for the Dutch market: market, locations, investment and operating model, in three languages from one source.',
-          'Ein Franchise-Businessplan für den niederländischen Markt: Markt, Standorte, Investition und Betriebsmodell, in drei Sprachen aus einer Quelle.', 'Un business plan de franchise pour le marché néerlandais : marché, emplacements, investissement et modèle d’exploitation, en trois langues à partir d’une seule source.',
-          'Hollanda pazarı için hazırlanmış franchise iş planı: pazar, konumlar, yatırım ve işletme modeli, tek kaynaktan üç dilde.', 'خطة عمل امتياز للسوق الهولندية: السوق والمواقع والاستثمار ونموذج التشغيل، بثلاث لغات من مصدر واحد.'],
-  'b.plan': ['Ondernemingsplan', 'Business plan', 'Businessplan', 'Business plan', 'İş planı', 'خطة العمل'], 'b.priv': ['Via privélink', 'By private link', 'Per privatem Link', 'Par lien privé', 'Özel bağlantıyla', 'عبر رابط خاص'],
-  // sektörler ve yapılanlar
-  's.horeca': ['Horeca', 'Hospitality', 'Gastronomie', 'Restauration', 'Restoran', 'مطاعم'], 's.skin': ['Huidkliniek', 'Skin clinic', 'Hautklinik', 'Clinique de la peau', 'Cilt kliniği', 'عيادة جلدية'],
-  's.dental': ['Tandartspraktijk', 'Dental clinic', 'Zahnarztpraxis', 'Cabinet dentaire', 'Diş kliniği', 'عيادة أسنان'], 's.beauty': ['Beautystudio', 'Beauty studio', 'Beautystudio', 'Institut de beauté', 'Güzellik stüdyosu', 'استوديو تجميل'],
-  's.hair': ['Kapsalon', 'Hair salon', 'Friseursalon', 'Salon de coiffure', 'Kuaför', 'صالون شعر'],
-  'k.app': ['App', 'App', 'App', 'Application', 'Uygulama', 'تطبيق'], 'k.panel': ['3D-paneel', '3D panel', '3D-Panel', 'Tableau 3D', '3D panel', 'لوحة ثلاثية الأبعاد'],
-  'k.kitchen': ['3D-keukenscherm', '3D kitchen screen', '3D-Küchenbildschirm', 'Écran cuisine 3D', '3D mutfak ekranı', 'شاشة مطبخ ثلاثية الأبعاد'], 'k.salon': ['3D-salonscherm', '3D salon screen', '3D-Salonbildschirm', 'Écran salon 3D', '3D salon ekranı', 'شاشة صالون ثلاثية الأبعاد'],
-  'k.web': ['Website', 'Website', 'Website', 'Site web', 'Web sitesi', 'موقع إلكتروني'], 'k.video': ['Uitlegvideo', 'Explainer video', 'Erklärvideo', 'Vidéo explicative', 'Tanıtım videosu', 'فيديو تعريفي'],
-  'k.shop': ['Webshop', 'Webshop', 'Webshop', 'Boutique en ligne', 'Online mağaza', 'متجر إلكتروني'],
+  title: ['Savastana · Binnenkort', 'Savastana · Coming soon', 'Savastana · Demnächst', 'Savastana · Bientôt', 'Savastana · Çok yakında', 'Savastana · قريبًا'],
+  eye: ['Savastana · Nederland', 'Savastana · Netherlands', 'Savastana · Niederlande', 'Savastana · Pays-Bas', 'Savastana · Hollanda', 'Savastana · هولندا'],
+  h: ['Binnen&shy;kort <em>online</em>.', 'Coming <em>soon</em>.', 'Dem&shy;nächst <em>online</em>.', 'Bientôt <em>en ligne</em>.', 'Çok <em>yakında</em>.', '<em>قريبًا</em>.'],
+  p: ['We werken aan iets nieuws. Kom snel terug.', 'We are working on something new. Check back soon.', 'Wir arbeiten an etwas Neuem. Schauen Sie bald wieder vorbei.', 'Nous préparons quelque chose de nouveau. Revenez bientôt.', 'Yeni bir şey üzerinde çalışıyoruz. Yakında tekrar bakın.', 'نعمل على شيء جديد. عُد قريبًا.'],
 };
-// işler: Hollanda'daki işler; açıklamalar [nl, en, de, fr, tr, ar]
-const P = [
-  { id: 'ninja', name: 'Ninja Antwerp', city: 'Antwerpen', s: 'horeca', k: ['app', 'panel', 'web', 'video'], img: 'img/p-ninja.webp', url: 'https://ninja.savastana.com/', video: 'https://ninja.savastana.com/hulp/',
-    d: ['Gasten-app, 3D-beheerpaneel en een nieuwe website voor een kebabrestaurant aan de Vlaamsekaai, met live spies, bordpaspoort en een uitlegvideo in het Vlaams.',
-        'Guest app, 3D management panel and a new website for a kebab restaurant on the Vlaamsekaai, with a live spit, a plate passport and an explainer video in Flemish.',
-        'Gäste-App, 3D-Verwaltungspanel und eine neue Website für ein Kebab-Restaurant am Vlaamsekaai, mit Live-Spieß, Tellerpass und einem Erklärvideo auf Flämisch.',
-        'Application clients, tableau de bord 3D et nouveau site pour un restaurant de kebab sur le Vlaamsekaai, avec broche en direct, passeport d’assiette et vidéo explicative en flamand.',
-        'Vlaamsekaai\'deki bir kebap restoranı için misafir uygulaması, 3D yönetim paneli ve yeni web sitesi: canlı şiş, tabak pasaportu ve Flamanca tanıtım videosu.',
-        'تطبيق للضيوف ولوحة إدارة ثلاثية الأبعاد وموقع جديد لمطعم كباب على رصيف فلامسكاي، مع سيخ مباشر وجواز للطبق وفيديو تعريفي بالفلمنكية.'] },
-  { id: 'grill', name: 'Grill-Point', city: 'Valkenswaard', s: 'horeca', k: ['app', 'kitchen'], img: 'img/p-grill.webp', url: 'https://grillpoint.savastana.com/',
-    d: ['Gasten-app met Grill-Cam, AI-chef en samen bestellen aan tafel, plus een 3D-keukenscherm voor een döner-, grill- en pizzarestaurant.',
-        'Guest app with Grill-Cam, an AI chef and ordering together at the table, plus a 3D kitchen screen for a döner, grill and pizza restaurant.',
-        'Gäste-App mit Grill-Cam, KI-Koch und gemeinsamem Bestellen am Tisch, dazu ein 3D-Küchenbildschirm für ein Döner-, Grill- und Pizzarestaurant.',
-        'Application clients avec Grill-Cam, chef IA et commande partagée à table, plus un écran de cuisine en 3D pour un restaurant döner, grill et pizza.',
-        'Döner, ızgara ve pizza restoranı için Grill-Cam\'li, yapay zekâ şefli ve masada birlikte sipariş verilen misafir uygulaması; 3D mutfak ekranı.',
-        'تطبيق للضيوف مع كاميرا الشواء وطاهٍ بالذكاء الاصطناعي وطلب جماعي على الطاولة، إضافة إلى شاشة مطبخ ثلاثية الأبعاد لمطعم دونر ومشويات وبيتزا.'] },
-  { id: 'pure', name: 'Pure Clinics', city: 'Nijmegen · Uden', s: 'skin', k: ['app', 'panel', 'shop', 'video'], img: 'img/p-pure.webp', url: 'https://pureclinics.savastana.com/', video: 'https://pureclinics.savastana.com/hulp/',
-    d: ['Leden-app en beheerpaneel voor een huidkliniek met twee vestigingen: intakes, huidtherapie, laserontharing en de webshop; beide klinieken live in 3D.',
-        'Member app and admin panel for a skin clinic with two locations: intakes, skin therapy, laser hair removal and the webshop; both clinics live in 3D.',
-        'Mitglieder-App und Verwaltungspanel für eine Hautklinik mit zwei Standorten: Erstgespräche, Hauttherapie, Laser-Haarentfernung und Webshop; beide Kliniken live in 3D.',
-        'Application membres et tableau de bord pour une clinique de la peau sur deux sites : consultations, thérapie cutanée, épilation laser et boutique en ligne ; les deux cliniques en 3D.',
-        'İki şubeli bir cilt kliniği için üye uygulaması ve yönetim paneli: ön görüşme, cilt terapisi, lazer epilasyon ve online mağaza; iki klinik canlı 3D.',
-        'تطبيق للأعضاء ولوحة إدارة لعيادة جلدية بفرعين: الاستشارات وعلاج البشرة وإزالة الشعر بالليزر والمتجر الإلكتروني؛ العيادتان مباشرةً بالأبعاد الثلاثة.'] },
-  { id: 'elite', name: 'Elite Smile', city: 'Eindhoven · Amersfoort', s: 'dental', k: ['app', 'panel', 'web', 'video'], img: 'img/p-elite.webp', url: 'https://elitesmile.savastana.com/', video: 'https://elitesmile.savastana.com/hulp/',
-    d: ['Patiënten-app met dertig functies, een kliniekpaneel in 3D en een nieuwe website met een pagina per tandarts, plus een uitlegvideo met ondertiteling in zeven talen.',
-        'Patient app with thirty features, a clinic panel in 3D and a new website with a page per dentist, plus an explainer video subtitled in seven languages.',
-        'Patienten-App mit dreißig Funktionen, ein Klinikpanel in 3D und eine neue Website mit einer Seite pro Zahnarzt, dazu ein Erklärvideo mit Untertiteln in sieben Sprachen.',
-        'Application patients avec trente fonctions, tableau de bord de la clinique en 3D et nouveau site avec une page par dentiste, plus une vidéo explicative sous-titrée en sept langues.',
-        'Otuz özellikli hasta uygulaması, 3D klinik paneli ve her diş hekimine ayrı sayfalı yeni web sitesi; yedi dilde altyazılı tanıtım videosu.',
-        'تطبيق للمرضى بثلاثين ميزة ولوحة للعيادة بالأبعاد الثلاثة وموقع جديد بصفحة لكل طبيب أسنان، إضافة إلى فيديو تعريفي مترجم إلى سبع لغات.'] },
-  { id: 'blanche', name: 'Blanche Beauty', city: 'Nijmegen · Uden', s: 'beauty', k: ['app', 'panel', 'video'], img: 'img/p-blanche.webp', url: 'https://blanche.savastana.com/', video: 'https://blanche.savastana.com/hulp/',
-    d: ['Leden-app en 3D-studiopaneel voor een nagel-, wimper- en wenkbrauwstudio: boeken per stylist, een kleurstudio die de lak op een echte hand schildert en Blanche Club.',
-        'Member app and 3D studio panel for a nails, lashes and brows studio: booking per stylist, a shade studio that paints the polish on a real hand and Blanche Club.',
-        'Mitglieder-App und 3D-Studiopanel für ein Nagel-, Wimpern- und Augenbrauenstudio: Buchen pro Stylistin, ein Farbstudio, das den Lack auf eine echte Hand malt, und der Blanche Club.',
-        'Application membres et tableau de bord 3D pour un studio ongles, cils et sourcils : réservation par styliste, un studio de teintes qui peint le vernis sur une vraie main et le Blanche Club.',
-        'Tırnak, kirpik ve kaş stüdyosu için üye uygulaması ve 3D stüdyo paneli: stiliste göre randevu, ojeyi gerçek bir ele süren renk stüdyosu ve Blanche Club.',
-        'تطبيق للأعضاء ولوحة استوديو ثلاثية الأبعاد لاستوديو الأظافر والرموش والحواجب: حجز حسب الخبيرة، واستوديو ألوان يطلي المناكير على يد حقيقية، ونادي بلانش.'] },
-  { id: 'ilker', name: 'İlker Tekin Hairstylist', city: 'Eindhoven', s: 'hair', k: ['app', 'salon', 'video'], img: 'img/p-ilker.webp', url: 'https://ilkertekin.savastana.com/', video: 'https://ilkertekin.savastana.com/hulp/',
-    d: ['Leden-app die kleur en kapsel past op je eigen foto, met een haarpaspoort en de salon live, plus een salonscherm in 3D met een kaart per stoel.',
-        'Member app that tries colour and cut on your own photo, with a hair passport and the salon live, plus a 3D salon screen with a card for every chair.',
-        'Mitglieder-App, die Farbe und Schnitt am eigenen Foto ausprobiert, mit Haarpass und dem Salon live, dazu ein 3D-Salonbildschirm mit einer Karte pro Stuhl.',
-        'Application membres qui essaie couleur et coupe sur votre propre photo, avec passeport capillaire et le salon en direct, plus un écran 3D du salon avec une fiche par fauteuil.',
-        'Rengi ve kesimi kendi fotoğrafında deneyen, saç pasaportlu ve salonu canlı gösteren üye uygulaması; her koltuğa bir kartlı 3D salon ekranı.',
-        'تطبيق للأعضاء يجرّب اللون والقصّة على صورتك، مع جواز للشعر والصالون مباشرةً، إضافة إلى شاشة صالون ثلاثية الأبعاد ببطاقة لكل كرسي.'] },
-];
 const pick = () => { const q = new URLSearchParams(location.search).get('lang'); if (LS.includes(q)) return q; try { const s = localStorage.getItem('sv-lang'); if (LS.includes(s)) return s; } catch (e) {} return 'nl'; };
-let L = pick(), mode = 'voice', VL = null;
-const ix = () => LS.indexOf(L), tt = k => T[k][ix()];
-const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-const ARW = '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11 11 5M6 5h5v5"/></svg>';
-function work() {
-  document.getElementById('workGrid').innerHTML = P.map(p => {
-    const go = `<a href="${p.url}" target="_blank" rel="noopener">${esc(tt('open'))} ${ARW}</a>${p.video ? `<a href="${p.video}" target="_blank" rel="noopener">${esc(tt('vid'))} ${ARW}</a>` : ''}`;
-    return `<article class="pj rv in"><div class="im"><img src="${p.img}" alt="${esc(p.name)}" loading="lazy"></div><div class="bd"><div class="tag">${esc(tt('s.' + p.s))} · ${esc(p.city)}</div><h3>${esc(p.name)}</h3><p>${esc(p.d[ix()])}</p>`
-      + `<div class="chips">${p.k.map(k => `<span>${esc(tt('k.' + k))}</span>`).join('')}</div><div class="go">${go}</div></div></article>`; }).join('');
-}
-function apply() {
-  const i = ix(); document.documentElement.lang = L; document.documentElement.dir = L === 'ar' ? 'rtl' : 'ltr'; document.title = T.title[i];
-  for (const e of document.querySelectorAll('[data-t]')) { const v = T[e.dataset.t][i]; if (e.hasAttribute('data-html')) e.innerHTML = v; else e.textContent = v; }
-  for (const e of document.querySelectorAll('[data-alt]')) e.alt = T[e.dataset.alt][i];
-  for (const e of document.querySelectorAll('[data-n]')) e.textContent = (+e.dataset.n).toLocaleString(LOC[L]);
-  for (const b of document.querySelectorAll('.langs button')) b.setAttribute('aria-pressed', b.dataset.l === L);
-  document.getElementById('lsel').value = L;
-  work(); if (!VL || !['tr', 'en', 'de'].includes(VL)) VL = TW(L); vid(false);
-}
-function vid(keep) { const v = document.getElementById('vid'), t = keep ? v.currentTime : 0, play = keep && !v.paused;
-  const src = `media/process-${VL}${mode === 'music' ? '-music' : ''}.mp4`; if (!v.src.endsWith(src)) { v.src = src; v.poster = `img/poster-${VL}.webp`; v.load(); if (t) v.currentTime = t; if (play) v.play().catch(() => {}); }
-  document.querySelectorAll('.chip[data-m]').forEach(c => c.setAttribute('aria-pressed', c.dataset.m === mode)); document.querySelectorAll('.chip[data-vl]').forEach(c => c.setAttribute('aria-pressed', c.dataset.vl === VL)); }
-const setL = l => { L = l; try { localStorage.setItem('sv-lang', L); } catch (e) {} VL = TW(L); apply(); };
+let L = pick();
+function apply() { const i = LS.indexOf(L); document.documentElement.lang = L; document.documentElement.dir = L === 'ar' ? 'rtl' : 'ltr'; document.title = T.title[i];
+  for (const e of document.querySelectorAll('[data-t]')) e.innerHTML = T[e.dataset.t][i];
+  for (const b of document.querySelectorAll('.langs button')) b.setAttribute('aria-pressed', b.dataset.l === L); }
 document.querySelector('.langs').innerHTML = LS.map(l => `<button type="button" data-l="${l}" title="${LN[l]}" lang="${l}">${l.toUpperCase()}</button>`).join('');
-document.getElementById('lsel').innerHTML = LS.map(l => `<option value="${l}" lang="${l}">${l.toUpperCase()} · ${LN[l]}</option>`).join('');
-document.querySelectorAll('.langs button').forEach(b => b.addEventListener('click', () => setL(b.dataset.l)));
-document.getElementById('lsel').addEventListener('change', e => setL(e.target.value));
-document.querySelectorAll('.chip[data-m]').forEach(c => c.addEventListener('click', () => { mode = c.dataset.m; vid(true); }));
-document.querySelectorAll('.chip[data-vl]').forEach(c => c.addEventListener('click', () => { VL = c.dataset.vl; vid(true); }));
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
-document.querySelectorAll('.rv').forEach(e => io.observe(e));
-addEventListener('scroll', () => document.getElementById('hdr').classList.toggle('sc', scrollY > 8), { passive: true });
+document.querySelectorAll('.langs button').forEach(b => b.addEventListener('click', () => { L = b.dataset.l; try { localStorage.setItem('sv-lang', L); } catch (e) {} apply(); }));
 apply();
 </script>
 </body>
